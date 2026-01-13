@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JMulliez - Portfolio</title>
+    <meta name="description" content="Portfolio de Joseph Mulliez, étudiant en informatique à l'IUT de Lannion. Découvrez mon parcours, mes compétences et mes projets.">
+
+    <!-- Polices Racing / Tech -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Russo+One&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+
+    <!-- COMPTEUR DE VITESSE (HUD) -->
+    <div id="speedometer-container">
+        <div class="gear-indicator" id="gear">N</div>
+        <div class="gauge-body">
+            <div class="gauge-rim"></div>
+            <div class="needle" id="needle"></div>
+            <div class="needle-center"></div>
+            <div class="speed-readout">
+                <span class="speed-value" id="speed-val">0</span>
+                <span class="speed-unit">KM/H</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <!-- NAVIGATION -->
+        <nav class="main-nav">
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link active">ACCUEIL</a></li>
+                <li><a href="portfolio.html" class="nav-link">PROJETS</a></li>
+                <li><a href="alternance.html" class="nav-link">ALTERNANCE</a></li>
+                <li><a href="contact.html" class="nav-link">CONTACT</a></li>
+            </ul>
+        </nav>
+
+        <!-- HEADER -->
+        <header class="hero-section hero-modern">
+            <div class="hero-content">
+                <div class="hero-text-content">
+                    <h1>Joseph <span>Mulliez</span></h1>
+                    <div class="hero-role">BUT INFORMATIQUE // ÉTUDIANT</div>
+                    <p class="hero-description">
+                        Bienvenue sur mon portfolio. Ce site détaille mon parcours académique, mes compétences et ma passion pour l'informatique.
+                        Faites défiler pour découvrir mon parcours complet.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://github.com" class="btn-social">GITHUB</a>
+                        <a href="https://linkedin.com" class="btn-social">LINKEDIN</a>
+                        <a href="mailto:mulliezjoseph5@gmail.com" class="btn-social">EMAIL</a>
+                        <!-- <a href="assets/pdf/Joseph.pdf" class="btn-social" target="_blank">CV.PDF</a> -->
+                        <a href="portfolio.html" class="btn-social">PROJETS</a>
+                    </div>
+                </div>
+                <div class="hero-image-large">
+                    <img src="assets/images/pp.jpg" alt="Joseph Mulliez">
+                </div>
+            </div>
+        </header>
+
+        <!-- SAISON 1 : FORMATION -->
+        <div class="season-header">
+            <div class="season-title">FORMATION <span style="font-size:1rem; color:#888;">// MON PARCOURS</span></div>
+            <div class="season-line"></div>
+        </div>
+
+        <!-- BAC GÉNÉRAL -->
+        <article class="report-card">
+            <div class="report-content">
+                <div class="project-header">
+                    <div>
+                        <div class="project-id">ÉTAPE 01</div>
+                        <h3 class="project-title">BAC Général</h3>
+                    </div>
+                </div>
+                <div class="report-text">
+                    <p><strong>Établissement :</strong> Lycée Naval de Brest</p>
+                    <p><strong>Période :</strong> 2021 - 2023</p>
+                    <p>Formation générale complète avec spécialisation en Mathématiques et NSI (Numérique et Sciences Informatiques). Cette formation m'a donné les bases solides en algorithmie et programmation.</p>
+                </div>
+            </div>
+            <div class="report-specs">
+                <img src="assets/images/kheuneu.jpg" style="border-radius:150px" alt="Lycée Naval">
+                <div class="tech-tags"><span class="tag">MATHS</span><span class="tag">NSI</span><span class="tag">ALGO</span></div>
+                <div class="specs-box">
+                    <h4>COMPÉTENCES</h4>
+                    <ul class="specs-list">
+                        <li>Algorithmie</li>
+                        <li>Programmation Python</li>
+                        <li>Raisonnement mathématique</li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+
+        <!-- BUT INFORMATIQUE -->
+        <article class="report-card">
+            <div class="report-content">
+                <div class="project-header">
+                    <div>
+                        <div class="project-id">ÉTAPE 02</div>
+                        <h3 class="project-title">BUT Informatique</h3>
+                    </div>
+                </div>
+                <div class="report-text">
+                    <p><strong>Établissement :</strong> IUT de Lannion</p>
+                    <p><strong>Période :</strong> 2023 - Actuellement (3ème année)</p>
+                    <p>Formation diplômante de 3 ans couvrant développement web, applications, bases de données, administration système et gestion de projet. Apprentissage complet du cycle de vie logiciel.</p>
+                </div>
+            </div>
+            <div class="report-specs">
+                <img src="assets/images/iut.webp"  style="border-radius: 25px" alt="IUT Lannion">
+                <div class="tech-tags"><span class="tag">JAVA</span><span class="tag">WEB</span><span class="tag">SQL</span></div>
+                <div class="specs-box">
+                    <h4>COMPÉTENCES</h4>
+                    <ul class="specs-list">
+                        <li>Développement web & apps</li>
+                        <li>Gestion bases de données</li>
+                        <li>Travail en équipe</li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+
+        <!-- STAGE -->
+        <article class="report-card">
+            <div class="report-content">
+                <div class="project-header">
+                    <div>
+                        <div class="project-id">ÉTAPE 03</div>
+                        <h3 class="project-title">Stage Professionnel</h3>
+                    </div>
+                </div>
+                <div class="report-text">
+                    <p><strong>Entreprise :</strong> ORANO</p>
+                    <p><strong>Période :</strong> Avril 2025 - Juin 2025 (3 mois)</p>
+                    <p>Stage immersif en environnement professionnel dans une grande entreprise. Découverte des réalités du monde du travail et contribution à des projets concrets.</p>
+                </div>
+            </div>
+            <div class="report-specs">
+                <img src="assets/images/orano-logo-white.svg"   alt="ORANO">
+                <div class="tech-tags"><span class="tag">ENTREPRISE</span><span class="tag">PROFESSIONNEL</span></div>
+                <div class="specs-box">
+                    <h4>COMPÉTENCES</h4>
+                    <ul class="specs-list">
+                        <li>Autonomie</li>
+                        <li>Adaptation</li>
+                        <li>Communication</li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+
+        <!-- ALTERNANCE -->
+        <article class="report-card">
+            <div class="report-content">
+                <div class="project-header">
+                    <div>
+                        <div class="project-id">ÉTAPE 04</div>
+                        <h3 class="project-title">Alternance Professionnelle</h3>
+                    </div>
+                </div>
+                <div class="report-text">
+                    <p><strong>Entreprise :</strong> ORANO (alternance)</p>
+                    <p><strong>Période :</strong> Depuis Septembre 2025</p>
+                    <p>3ème année de BUT en alternance. Combinaison d'études et d'expérience professionnelle pour approfondir les compétences techniques et découvrir les responsabilités en environnement réel.</p>
+                </div>
+            </div>
+            <div class="report-specs">
+                <img src="assets/images/orano-logo-white.svg"  alt="ORANO Alternance">
+                <div class="tech-tags"><span class="tag">ALTERNANCE</span><span class="tag">FORMATION</span></div>
+                <div class="specs-box">
+                    <h4>COMPÉTENCES</h4>
+                    <ul class="specs-list">
+                        <li>Gestion de projet</li>
+                        <li>Leadership</li>
+                        <li>Expertise technique</li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+
+        <!-- SAISON 2 : COMPÉTENCES -->
+        <div class="season-header">
+            <div class="season-title">COMPÉTENCES <span style="font-size:1rem; color:#888;">// MES FORCES</span></div>
+            <div class="season-line"></div>
+        </div>
+
+        <!-- COMPÉTENCE 1 -->
+        <article class="report-card">
+            <div class="report-content">
+                <div class="project-header">
+                    <div>
+                        <div class="project-id">SKILL 01</div>
+                        <h3 class="project-title">Travail en Autonomie</h3>
+                    </div>
+                </div>
+                <div class="report-text">
+                    <p>Capacité à gérer ma charge de travail de façon indépendante. Discipline et organisation personnelle développées notamment grâce à 10 ans de danse classique nécessitant rigueur et persévérance.</p>
+                </div>
+            </div>
+            <div class="report-specs">
+                <img src="assets/images/autonomy.png" class="project-img" alt="Autonomie">
+                <div class="specs-box">
+                    <h4>DÉVELOPPEMENT</h4>
+                    <ul class="specs-list">
+                        <li>Auto-discipline</li>
+                        <li>Gestion du temps</li>
+                        <li>Persévérance</li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+
+        <!-- COMPÉTENCE 2 -->
+        <article class="report-card">
+            <div class="report-content">
+                <div class="project-header">
+                    <div>
+                        <div class="project-id">SKILL 02</div>
+                        <h3 class="project-title">Développement Web & Applications</h3>
+                    </div>
+                </div>
+                <div class="report-text">
+                    <p>Maîtrise du cycle complet de développement : conception, implémentation et déploiement. Expérience en Frontend (HTML, CSS, JavaScript) et Backend (Java, SQL).</p>
+                </div>
+            </div>
+            <div class="report-specs">
+                <img src="assets/images/web-development.png" class="project-img" alt="Développement web">
+                <div class="tech-tags"><span class="tag">JAVA</span><span class="tag">WEB</span><span class="tag">SQL</span></div>
+                <div class="specs-box">
+                    <h4>TECHNOLOGIES</h4>
+                    <ul class="specs-list">
+                        <li>HTML/CSS/JS</li>
+                        <li>Java</li>
+                        <li>SQL/Bases données</li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+
+        <!-- COMPÉTENCE 3 -->
+        <article class="report-card">
+            <div class="report-content">
+                <div class="project-header">
+                    <div>
+                        <div class="project-id">SKILL 03</div>
+                        <h3 class="project-title">Travail en Équipe & Gestion de Projet</h3>
+                    </div>
+                </div>
+                <div class="report-text">
+                    <p>Collaborateur efficace à l'aise dans des environnements pluridisciplinaires. Expérience d'aide-moniteur en voile depuis 2023, développant compétences de leadership et pédagogie.</p>
+                </div>
+            </div>
+            <div class="report-specs">
+                <img src="assets/images/teamwork.png" class="project-img" alt="Travail en équipe">
+                <div class="specs-box">
+                    <h4>APTITUDES</h4>
+                    <ul class="specs-list">
+                        <li>Communication</li>
+                        <li>Leadership</li>
+                        <li>Organisation</li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+
+        <!-- SAISON 3 : CENTRES D'INTÉRÊT -->
+        <div class="season-header">
+            <div class="season-title">PASSIONS <span style="font-size:1rem; color:#888;">// INTÉRÊTS</span></div>
+            <div class="season-line"></div>
+        </div>
+
+        <!-- PASSION 1 -->
+        <article class="report-card">
+            <div class="report-content">
+                <div class="project-header">
+                    <div>
+                        <div class="project-id">PASSION 01</div>
+                        <h3 class="project-title">Informatique & Coding</h3>
+                    </div>
+                </div>
+                <div class="report-text">
+                    <p>Passion découverte en collège et développée au lycée. Toujours dans une démarche d'apprentissage continu et de maîtrise de nouvelles technologies. J'aime partager mes connaissances avec mes proches.</p>
+                </div>
+            </div>
+            <div class="report-specs">
+                <img src="assets/images/coding.jpg" class="project-img" alt="Coding">
+            </div>
+        </article>
+
+        <!-- PASSION 2 -->
+        <article class="report-card">
+            <div class="report-content">
+                <div class="project-header">
+                    <div>
+                        <div class="project-id">PASSION 02</div>
+                        <h3 class="project-title">Danse Classique</h3>
+                    </div>
+                </div>
+                <div class="report-text">
+                    <p>Pratiquée depuis 8 ans avec progression vers la compétition (niveau national). 25 heures d'entraînement par semaine m'ont forgé rigeur et discipline indispensables au métier d'informaticien.</p>
+                </div>
+            </div>
+            <div class="report-specs">
+                <img src="assets/images/lac.jpg" class="project-img" alt="Danse">
+            </div>
+        </article>
+
+        <!-- PASSION 3 -->
+        <article class="report-card">
+            <div class="report-content">
+                <div class="project-header">
+                    <div>
+                        <div class="project-id">PASSION 03</div>
+                        <h3 class="project-title">Randonnée en Montagne</h3>
+                    </div>
+                </div>
+                <div class="report-text">
+                    <p>Depuis 5 ans, partir en montagne chaque été. La philosophie de la randonnée (efforts = récompense) s'applique parfaitement au monde professionnel : pas de résultat sans travail.</p>
+                </div>
+            </div>
+            <div class="report-specs">
+                <img src="assets/images/rando.jpg" class="project-img" alt="Randonnée">
+            </div>
+        </article>
+
+        <!-- PASSION 4 -->
+        <article class="report-card">
+            <div class="report-content">
+                <div class="project-header">
+                    <div>
+                        <div class="project-id">PASSION 04</div>
+                        <h3 class="project-title">Voile & Navigation</h3>
+                    </div>
+                </div>
+                <div class="report-text">
+                    <p>Passionné depuis l'enfance. Aide-moniteur depuis été 2023. La voile m'a enseigné la sécurité, la rigueur et l'esprit critique - qualités essentielles pour exceller en informatique.</p>
+                </div>
+            </div>
+            <div class="report-specs">
+                <img src="assets/images/cata.jpg" class="project-img" alt="Voile">
+            </div>
+        </article>
+
+    </div>
+
+    <footer>
+        <p>Portfolio de Joseph Mulliez</p>
+        <p>&copy; 2024 - Tous droits réservés</p>
+    </footer>
+
+    <script src="portfolio.js"></script>
+</body>
+</html>

@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JMulliez - Full Telemetry</title>
+    <meta name="description" content="Portfolio Joseph Mulliez - BUT Informatique">
+
+    <!-- Polices Racing / Tech -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Russo+One&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="portfolio.css">
+</head>
+
+<body>
+
+    <!-- COMPTEUR DE VITESSE (HUD) -->
+    <div id="speedometer-container">
+        <div class="gear-indicator" id="gear">N</div>
+        <div class="gauge-body">
+            <div class="gauge-rim"></div>
+            <div class="needle" id="needle"></div>
+            <div class="needle-center"></div>
+            <div class="speed-readout">
+                <span class="speed-value" id="speed-val">0</span>
+                <span class="speed-unit">KM/H</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <!-- NAVIGATION -->
+        <nav class="main-nav">
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">ACCUEIL</a></li>
+                <li><a href="portfolio.html" class="nav-link active">PROJETS</a></li>
+                <li><a href="alternance.html" class="nav-link">ALTERNANCE</a></li>
+                <li><a href="contact.html" class="nav-link">CONTACT</a></li>
+            </ul>
+        </nav>
+
+        <!-- HEADER -->
+        <header class="hero-section">
+            <div class="profile-pic">
+                <img src="assets/images/pp.jpg" alt="Joseph Mulliez">
+            </div>
+            <div class="hero-text">
+                <h1>Joseph <span>Mulliez</span></h1>
+                <div class="hero-role">BUT INFORMATIQUE // FULLSTACK DEV</div>
+                <p>
+                    Bienvenue dans mes archives techniques. Ce portfolio détaille l'intégralité de mes projets
+                    universitaires et professionnels. À travers ces différentes missions, vous découvrirez mon évolution
+                    en tant que développeur fullstack, ma capacité à travailler en équipe, et ma passion pour les technologies modernes.
+                    Faites défiler la page pour accélérer et découvrir mon parcours complet.
+                </p>
+                <div class="social-links">
+                    <a href="https://github.com/jmulliez" class="btn-social">GITHUB</a>
+                    <a href="https://linkedin.com" class="btn-social">LINKEDIN</a>
+                    <a href="mailto:ton-email@gmail.com" class="btn-social">EMAIL</a>
+                    <a href="assets/pdf/CV.pdf" class="btn-social">CV.PDF</a>
+                    <a href="index.html" class="btn-social">ACCUEIL</a>
+                </div>
+            </div>
+        </header>
+
+        <!-- INTRODUCTION GÉNÉRALE -->
+        <section class="intro-section">
+            <h2>Mon Parcours Professionnel</h2>
+            <p>Depuis le début de ma formation au BUT Informatique de l'IUT de Lannion, j'ai eu l'opportunité de 
+            travailler sur des projets variés et enrichissants qui m'ont permis de développer des compétences solides 
+            en développement logiciel, gestion de bases de données, et administration système.</p>
+            <p>Ces projets sont autant de jalons dans mon évolution en tant que développeur. Chacun m'a apporté des 
+            apprentissages précieux : travail d'équipe, respect des délais, qualité du code, et capacité à résoudre 
+            des problèmes complexes. Je vous invite à explorer ces réalisations et à découvrir comment j'ai transformé 
+            les défis en opportunités d'apprentissage.</p>
+        </section>
+
+        <!-- SEMESTRE 1 -->
+        <div class="season-header">
+            <div class="season-title">SEMESTRE 1</div>
+            <div class="season-line"></div>
+        </div>
+        <div class="season-intro">
+            <p>Le semestre 1 pose les fondations de la formation BUT Informatique. À travers ces projets, j'ai acquis 
+            les compétences essentielles : configuration d'environnements de développement, modélisation de données, 
+            audit technique, et initiation à la communication professionnelle. Ces bases sont cruciales pour toute 
+            carrière informatique durable et évolutive.</p>
+        </div>
+
+        <!-- S1-P1 -->
+        <article class="report-card">
+            <div class="report-content">
+                <div class="project-header">
+                    <div>
+                        <div class="project-id">MISSION S1-01</div>
+                        <h3 class="project-title">Poste de Dév</h3>
+                    </div>
+                </div>
+                <div class="report-text">
+                    <p>Plongée détaillée dans la configuration d'un environnement de développement. Objectif : fournir
+                        les compétences pour installer et configurer un poste (éditeurs, compilateurs, Git).</p>
+                    <p>Sensibilisation à l'importance d'un environnement propre (via Docker), compatible pour le travail
+                    <p><strong>Mise en pratique :</strong> Containerisation d'applications, orchestration Docker, et intégration continue. Bases solides pour la DevOps et le déploiement en production.</p>
+                        en équipe et reproductible pour éviter les "conflits de versions".</p>
+                </div>
+            </div>
+            <div class="report-specs">
+                <img src="assets/images/docker.png" class="project-img" alt="Docker">
+                <div class="tech-tags"><span class="tag">DOCKER</span><span class="tag">LINUX</span><span
+                        class="tag">BASH</span></div>
+                <div class="specs-box">
+                    <h4>COMPÉTENCES</h4>
+                    <ul class="specs-list">
+                        <li>Réaliser un développement d'applications</li>
+                        <li>Optimiser des applications informatiques</li>
+                        <li>Administrer des systèmes d'information communicants</li>
+                        <li>Conduire un projet</li>
+                        <li>Travailler dans une équipe informatique</li>
+                    </ul>
+                </div>
+                <a href="assets/pdf/sae_docker.pdf" target="_blank" class="btn-action btn-doc">ÉNONCÉ PDF</a>
+            </div>
+        </article>
+
+        <!-- S1-P2 -->
+        <article class="report-card">
+            <div class="report-content">
+                <div class="project-header">
+                    <div>
+                        <div class="project-id">MISSION S1-02</div>
+                        <h3 class="project-title">Modélisation BDD</h3>
+                    </div>
+                </div>
+                <div class="report-text">
+                    <p>Modélisation d'une partie du <strong>Programme National (PN)</strong> du BUT Informatique.</p>
+                    <p>Identification des entités, relations et attributs. Traduction des besoins théoriques en
+                    <p><strong>Approche méthodique :</strong> Analyse des besoins, normalisation des données (formes normales), et documentation complète. Fondamentaux essentiels pour tout projet informatique.</p>
+                        structures de données informatiques efficaces (MCD/MLD).</p>
+                </div>
+            </div>
+            <div class="report-specs">
+                <img src="assets/images/database1.png" class="project-img" alt="Merise">
+                <div class="tech-tags"><span class="tag">MERISE</span><span class="tag">UML</span></div>
+                <div class="specs-box">
+                    <h4>COMPÉTENCES</h4>
+                    <ul class="specs-list">
+                        <li>Gérer des données de l'information</li>
+                        <li>Conduire un projet</li>
+                        <li>Travailler dans une équipe informatique</li>
+                    </ul>
+                </div>
+                <a href="assets/pdf/diagramme_des_classes.pdf" target="_blank" class="btn-action btn-doc">DIAGRAMME
+                    PDF</a>
+            </div>
+        </article>
+
+        <!-- S1-P3 -->
+        <article class="report-card">
+            <div class="report-content">
+                <div class="project-header">
+                    <div>
+                        <div class="project-id">MISSION S1-03</div>
+                        <h3 class="project-title">Sudoku en C</h3>
+                    </div>
+                </div>
+                <div class="report-text">
+                    <p>Conception et réalisation d'un programme en C pour jouer au Sudoku.</p>
+                    <p><strong>Phase 1 :</strong> Maquette, algorithmes (pseudo-code) et liste des fonctions.</p>
+                    <p><strong>Phase 2 :</strong> Codage, cahier de tests, traces d'exécution et documentation
+                        <strong>Doxygen</strong>.</p>
+                </div>
+            </div>
+            <div class="report-specs">
+                <img src="assets/images/sudoku.png" class="project-img" alt="Sudoku">
+                <div class="tech-tags"><span class="tag">C</span><span class="tag">ALGO</span><span
+                        class="tag">DOXYGEN</span></div>
+                <div class="specs-box">
+                    <h4>COMPÉTENCES</h4>
+                    <ul class="specs-list">
+                        <li>Réaliser un développement d'applications</li>
+                        <li>Optimiser des applications informatiques</li>
+                        <li>Conduire un projet</li>
+                        <li>Travailler dans une équipe informatique</li>
+                    </ul>
+                </div>
+                <a href="https://github.com/jmulliez/Projet_sudoku.git" target="_blank" class="btn-action">REPO
+                    GITHUB</a>
+            </div>
+        </article>
+
+        <!-- S1-P4 -->
+        <article class="report-card">
+            <div class="report-content">
+                <div class="project-header">
+                    <div>
+                        <div class="project-id">MISSION S1-04</div>
+                        <h3 class="project-title">Interview</h3>
+                    </div>
+                    <p><strong>Insights précieux :</strong> Compréhension des défis digitaux des petites entreprises, importance de la présence web, et nécessité d'adapter la communication technique à des publics non-informaticiens.</p>
+                </div>
+                <div class="report-text">
+                    <p>Contacter une entreprise et interviewer son gérant sur sa stratégie web.</p>
+                    <p>Interview avec le gérant d'<strong>Armor Cycles</strong> (Lannion). Analyse des besoins
+                        numériques d'une PME locale et confrontation à la réalité de la communication professionnelle.
+                    </p>
+                </div>
+            </div>
+            <div class="report-specs">
+                <img src="assets/images/armor_cycles.jpg" class="project-img" alt="Interview">
+                <div class="tech-tags"><span class="tag">AUDIT</span><span class="tag">COM</span></div>
+                <div class="specs-box">
+                    <h4>COMPÉTENCES</h4>
+                    <ul class="specs-list">
+                        <li>Conduire un projet</li>
+                        <li>Travailler dans une équipe informatique</li>
+                    </ul>
+                </div>
+                <a href="assets/pdf/rapport_interview.pdf" target="_blank" class="btn-action btn-doc">RAPPORT PDF</a>
+            </div>
+        </article>
+
+        <!-- SEMESTRE 2 -->
+        <div class="season-header">
+            <div class="season-title">SEMESTRE 2</div>
+            <div class="season-line"></div>
+        </div>
+        <div class="season-intro">
+            <p>Le semestre 2 marque une accélération du parcours pédagogique avec des projets de plus grande envergure. 
+            Ces missions couvrent l'ensemble du cycle de vie logiciel : du management de projet à la gestion de données, 
+            en passant par l'administration système et la réalisation d'une application complexe. C'est le moment où les 
+            concepts théoriques se transforment en réalisations concrètes et mesurables.</p>
+        </div>
+
+        <!-- S2-P1 -->
+        <article class="report-card">
+            <div class="report-content">
+                <div class="project-header">
+                    <div>
+                        <div class="project-id">MISSION S2-01</div>
+                        <h3 class="project-title">Développement App</h3>
+                    </div>
+                </div>
+                <div class="report-text">
+                    <p><strong>Objectif :</strong> Produire une application fonctionnelle en groupe de 4 étudiants pour
+                        une salle de spectacles fictive.</p>
+                    <p>Nous avions comme matières premières un diagramme UML complet de la conception, ainsi qu'une
+                        explication détaillée de toutes les actions possibles (User Stories) que le client souhaitait
+                        pour son logiciel de gestion de salle et de réservations.</p>
+                    <p>Pour ce projet, nous avons dû concevoir l'Interface Homme/Machine (GUI), la partie Back-end
+                        (logique métier) et enfin toute la base de données nécessaire au bon fonctionnement de
+                        l'application via JDBC. Coordination MVC essentielle.</p>
+                    <p><strong>Résultats :</strong> Application entièrement fonctionnelle avec gestion complète des réservations, authentification utilisateur, et dashboard administrateur. Travail collaboratif efficace via Git.</p>
+                </div>
+            </div>
+            <div class="report-specs">
+                <img src="assets/images/java.PNG" class="project-img" alt="Java App">
+                <div class="tech-tags"><span class="tag">JAVA</span><span class="tag">MVC</span><span
+                        class="tag">SQL</span></div>
+                <div class="specs-box">
+                    <h4>COMPÉTENCES</h4>
+                    <ul class="specs-list">
+                        <li>Réaliser un développement d'applications</li>
+                        <li>Optimiser des applications informatiques</li>
+                        <li>Administrer des systèmes d'information communicants</li>
+                        <li>Gérer des données de l'information</li>
+                        <li>Conduire un projet</li>
+                        <li>Travailler dans une équipe informatique</li>
+                    </ul>
+                </div>
+                <a href="https://github.com/ChatPardeur/SAE_205/tree/master/SAE_201/src" target="_blank"
+                    class="btn-action">CODE SOURCE</a>
+            </div>
+        </article>
+
+        <!-- S2-P4 (Gestion) -->
+        <article class="report-card">
+            <div class="report-content">
+                <div class="project-header">
+                    <div>
+                        <div class="project-id">MISSION S2-04</div>
+                        <h3 class="project-title">Gestion & Planification</h3>
+                    </div>
+                </div>
+                <div class="report-text">
+                    <p>Ce projet est intrinsèquement lié au développement de l'application S2-01. Il constitue la phase
+                        de préparation, de chiffrage et de planification.</p>
+                    <p>À partir du descriptif client, nous avons réparti de manière prévisionnelle toutes les
+                        fonctionnalités et éléments à implémenter entre les 4 membres du groupe. Nous avons produit une
+                        <strong>matrice RACI</strong>, un organigramme des tâches (WBS) et une estimation des charges.
+                    </p>
+                    <p><strong>Outils utilisés :</strong> Microsoft Project, Excel pour les calculs de charges, et documentation collaborative. Respect des délais et gestion des risques primordial.</p>
+                </div>
+            </div>
+            <div class="report-specs">
+                <img src="assets/images/OT.png" class="project-img" alt="Gestion Projet">
+                <div class="tech-tags"><span class="tag">GANTT</span><span class="tag">RACI</span><span
+                        class="tag">WBS</span></div>
+                <div class="specs-box">
+                    <h4>COMPÉTENCES</h4>
+                    <ul class="specs-list">
+                        <li>Conduire un projet</li>
+                        <li>Travailler dans une équipe informatique</li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+
+        <!-- S2-P2 -->
+        <article class="report-card">
+            <div class="report-content">
+                <div class="project-header">
+                    <div>
+                        <div class="project-id">MISSION S2-02</div>
+                        <h3 class="project-title">Service Réseau</h3>
+                    </div>
+                </div>
+                <div class="report-text">
+                    <p>Nous avons travaillé à la mise en place d'une stack Web complète. Utilisation d'Apache comme
+                        serveur web, MySQL pour la gestion de base de données, avec PHP, HTML5 et CSS pour le front-end.
+                    </p>
+                    <p>Ce projet nous a permis de pratiquer l'installation et la configuration de services réseau
+                    <p><strong>Apprentissages clés :</strong> Configuration VirtualHost Apache, sécurité des bases données, optimisation des performances web, et déploiement en environnement production.</p>
+                        essentiels, notamment sous environnement Linux (Permissions, Fichiers de conf).</p>
+                </div>
+            </div>
+            <div class="report-specs">
+                <img src="assets/images/service.png" class="project-img" alt="Linux Service">
+                <div class="tech-tags"><span class="tag">LINUX</span><span class="tag">APACHE</span><span
+                        class="tag">PHP</span></div>
+                <div class="specs-box">
+                    <h4>COMPÉTENCES</h4>
+                    <ul class="specs-list">
+                        <li>Réaliser un développement d'applications</li>
+                        <li>Optimiser des applications informatiques</li>
+                        <li>Conduire un projet</li>
+                        <li>Travailler dans une équipe informatique</li>
+                    </ul>
+                </div>
+                <a href="assets/pdf/Rapport_projet_service_réseaux.pdf" target="_blank"
+                    class="btn-action btn-doc">RAPPORT PDF</a>
+            </div>
+        </article>
+
+        <!-- S2-P3 -->
+        <article class="report-card">
+            <div class="report-content">
+                <div class="project-header">
+                    <div>
+                        <div class="project-id">MISSION S2-03</div>
+                        <h3 class="project-title">Exploitation BDD</h3>
+                    </div>
+                </div>
+                <div class="report-text">
+                    <p>Conception et gestion d'une base de données complexe, puis utilisation de jeux de données fournis
+                        pour réaliser des statistiques.</p>
+                    <p><strong>Phase 1 :</strong> Conception via SqlWorkbench (MCD/MLD).</p>
+                    <p><strong>Phase 2 :</strong> Importation de données massives (CSV) via des données.</p>
+                    <p><strong>Compétences développées :</strong> Optimisation des requêtes, utilisation des JOINs complexes, agrégations, et visualisation des résultats commandes SQL avancées.</p>
+                    <p><strong>Phase 3 :</strong> Requêtes SQL pour statistiques et analyse.</p>
+                </div>
+            </div>
+            <div class="report-specs">
+                <img src="assets/images/database2.png" class="project-img" alt="SQL Database">
+                <div class="tech-tags"><span class="tag">SQL</span><span class="tag">DATA ANALYSIS</span></div>
+                <div class="specs-box">
+                    <h4>COMPÉTENCES</h4>
+                    <ul class="specs-list">
+                        <li>Gérer des données de l'information</li>
+                        <li>Conduire un projet</li>
+                        <li>Travailler dans une équipe informatique</li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+
+        <!-- S2-P5 -->
+        <article class="report-card">
+            <div class="report-content">
+                <div class="project-header">
+                    <div>
+                        <div class="project-id">MISSION S2-05</div>
+                        <h3 class="project-title">Team Building</h3>
+                    </div>
+                </div>
+                <div class="report-text">
+                    <p><strong>Objectif :</strong> créer une <strong>course d’orientation</strong> pour une entreprise.</p>
+                    <p>Mise en place de l’activité sur une <strong>grande zone autour de Ploumanac’h</strong>, avec des balises et énigmes réparties sur des points d’intérêt, afin de faire progresser des <strong>groupes</strong> en autonomie.</p>
+                    <p>Alternance d’<strong>efforts sportifs</strong> et de <strong>jeux ludiques</strong> dans une ambiance joyeuse favorisant la cohésion.</p>
+                    <p>Fin de journée par un <strong>moment de détente</strong> dans un restaurant partenaire pour prolonger la convivialité.</p>
+                </div>
+            </div>
+            <div class="report-specs">
+                <img src="assets/images/ploumanac'h.png" alt="Team Building" class="project-img">
+                <div class="tech-tags"><span class="tag">COMMUNICATION</span><span class="tag">VIDÉO</span></div>
+                <div class="specs-box">
+                    <h4>COMPÉTENCES</h4>
+                    <ul class="specs-list">
+                        <li>Conduire un projet</li>
+                        <li>Travailler dans une équipe informatique</li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+
+        
+
+        <!-- SEMESTRE 3 -->
+        <div class="season-header">
+            <div class="season-title">SEMESTRE 3 / SEMESTRE 4</div>
+            <div class="season-line"></div>
+        </div>
+        <div class="season-intro">
+            <p>Le semestre 3 marque un tournant majeur : transition vers une formation plus professionnelle et spécialisée. Plusieurs petits projets académiques ont jalonné ce semestre, mais l'expérience centrale est <strong>UN GROS PROJET RÉALISÉ TOUT AU LONG DE L'ANNÉE</strong> via une méthodologie <strong>AGILE</strong> (multiples sprints). C'est à ce moment que j'ai vraiment compris les défis du développement collaboratif en entreprise, travaillant en équipes pluridisciplinaires (6 personnes) sur une application web d'envergure.</p>
+        </div>
+
+        <!-- S3-P1 -->
+        <article class="report-card">
+            <div class="report-content">
+                <div class="project-header">
+                    <div>
+                        <div class="project-id">MISSION S3-01</div>
+                        <h3 class="project-title">Plateforme de Services</h3>
+                    </div>
+                </div>
+                <div class="report-text">
+                    <p><strong>Contexte :</strong> <strong style="color: #FFF200;">🎯 PROJET MAJEUR SUR TOUTE L'ANNÉE</strong> réalisé en équipe de <em>6 personnes</em> avec méthodologie <strong>AGILE</strong> (multiples sprits). Objectif : développer une plateforme web combinant les fonctionnalités du <strong>Bon Coin</strong> et les avis style <strong>TripAdvisor</strong>.</p>
+                    
+                    <p><strong style="color: #FFF200;">📋 Fonctionnalités principales :</strong></p>
+                    <ul style="margin-left: 1.5rem; line-height: 1.8;">
+                        <li>🏢 Les <strong>entreprises</strong> créent et publient des offres d'activités ou services</li>
+                        <li>👥 Les <strong>particuliers</strong> parcourent le catalogue et découvrent les services disponibles</li>
+                        <li>❤️ Système de <strong>"j'aimes"</strong> pour favoriser les offres pertinentes</li>
+                        <li>⭐ <strong>Commentaires et notation</strong> (comme TripAdvisor) pour chaque service</li>
+                        <li>🔐 <strong>Gestion complète des utilisateurs</strong> (authentification, profils, historique)</li>
+                    </ul>
+                    
+                    <p><strong style="color: #FFF200;">🎨 Ma contribution (Frontend) :</strong></p>
+                    <p>En tant que membre de l'équipe <em>frontend (3 personnes)</em>, j'ai été responsable de la <strong>mise en forme et de l'expérience utilisateur</strong>. Ma mission incluait :</p>
+                    <ul style="margin-left: 1.5rem; line-height: 1.8;">
+                        <li>✓ Conception et développement de l'intégralité du <strong>CSS</strong></li>
+                        <li>✓ Création de <strong>composants réutilisables</strong> et modulaires</li>
+                        <li>✓ Optimisation de l'<strong>accessibilité</strong> et respect des standards web</li>
+                        <li>✓ <strong>Animations fluides</strong> et transitions visuelles</li>
+                        <li>✓ Adaptation <strong>mobile-first</strong> responsive design</li>
+                        <li>✓ Navigation <strong>intuitive</strong> et feedback visuels clairs</li>
+                    </ul>
+                    <p>Collaboration étroite avec les deux autres développeurs frontend et l'équipe <em>backend (3 personnes)</em> qui gérait la base de données et toute la logique métier. Résultat : interface cohérente, moderne et performante.</p>
+                    
+                    <p><strong style="color: #FFF200;">🚀 Résultats & Apprentissages :</strong></p>
+                    <ul style="margin-left: 1.5rem; line-height: 1.8;">
+                        <li>✅ Application <strong>entièrement fonctionnelle et déployable</strong></li>
+                        <li>✅ <strong>Excellente collaboration</strong> d'équipe avec méthodologie Agile</li>
+                        <li>✅ <strong>Respect des délais</strong> et qualité de code maintenue via Git</li>
+                        <li>✅ Expérience très <strong>enrichissante</strong> en gestion de projet complexe</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="report-specs">
+                <img src="assets/images/scooby-team.png" class="project-img" alt="Marketplace">
+                <div class="tech-tags"><span class="tag">PHP</span><span class="tag">MYSQL</span><span class="tag">MVC</span><span class="tag">HTML5</span><span class="tag">CSS</span><span class="tag">AGILE</span></div>
+                <div class="specs-box">
+                    <h4>COMPÉTENCES</h4>
+                    <ul class="specs-list">
+                        <li>Réaliser un développement d'applications</li>
+                        <li>Optimiser des applications informatiques</li>
+                        <li>Gérer des données de l'information</li>
+                        <li>Conduire un projet</li>
+                        <li>Travailler dans une équipe informatique</li>
+                    </ul>
+                </div>
+                <a href="https://github.com/LucasOtw/SAE3_ScoobyTeam" target="_blank" class="btn-action">CODE SOURCE</a>
+                <a href="https://www.figma.com/proto/3Cri5T5PzV2oJHWtjKxsca/SAE-3-4?node-id=814-8986&starting-point-node-id=814%3A8986" target="_blank" class="btn-action">MAQUETTE FIGMA</a>
+            </div>
+        </article>
+
+        <!-- STAGE -->
+        <div class="season-header">
+            <div class="season-title">STAGE</div>
+            <div class="season-line"></div>
+        </div>
+        <div class="season-intro">
+            <p>Stage chez <strong style="color: #FFF200;">ORANO PROJETS</strong>, une entreprise spécialisée en ingénierie et gestion de projets. Cette période m'a permis d'appliquer les connaissances théoriques dans un contexte professionnel réel, d'évoluer en environnement agile, et de collaborer avec des développeurs et ingénieurs expérimentés dans un cadre industrie.</p>
+        </div>
+
+        <!-- STAGE-P1 -->
+        <article class="report-card">
+            <div class="report-content">
+                <div class="project-header">
+                    <div>
+                        <div class="project-id">STAGE-01</div>
+                        <h3 class="project-title">Logiciel VBA - Suivi Projets</h3>
+                    </div>
+                </div>
+                <div class="report-text">
+                    <p><strong style="color: #FFF200;">🎯 Contexte & Objectif :</strong> Stage chez <strong>ORANO PROJETS</strong>. Développement d'un <strong>logiciel Excel en VBA</strong> destiné aux chefs de projet pour suivre l'avancée de leurs activités et la gestion de leurs équipes en temps réel.</p>
+                    
+                    <p><strong style="color: #FFF200;">📊 Fonctionnalités du logiciel :</strong></p>
+                    <ul style="margin-left: 1.5rem; line-height: 1.8;">
+                        <li>📈 <strong>Dashboard d'avancée</strong> : suivi en temps réel des activités par équipe</li>
+                        <li>👥 <strong>Gestion des équipes</strong> : attribution des tâches, suivi des ressources</li>
+                        <li>📅 <strong>Planification</strong> : calendrier des jalons et deadlines</li>
+                        <li>📝 <strong>Rapports automatisés</strong> : génération de rapports d'avancée</li>
+                        <li>🎨 <strong>Interface intuitive</strong> : graphiques et visualisations dynamiques</li>
+                    </ul>
+                    
+                    <p><strong style="color: #FFF200;">💻 Ma contribution :</strong></p>
+                    <p>Développement complet du logiciel en <strong>VBA (Visual Basic for Applications)</strong>. Mission incluant :</p>
+                    <ul style="margin-left: 1.5rem; line-height: 1.8;">
+                        <li>✓ Conception de la <strong>architecture du logiciel</strong> et design UX/UI</li>
+                        <li>✓ Codage en <strong>VBA</strong> de tous les modules (calculs, interactions, automatisations)</li>
+                        <li>✓ Intégration avec <strong>Excel</strong> (formules, macros, événements)</li>
+                        <li>✓ Création de <strong>graphiques dynamiques</strong> et tableaux de bord</li>
+                        <li>✓ <strong>Création de nouveaux outils Excel/VBA</strong> pour le suivi d'activité et de projet</li>
+                        <li>✓ Tests et validation du logiciel</li>
+                        <li>✓ Documentation et formation des utilisateurs (chefs de projet)</li>
+                    </ul>
+                    
+                    <p><strong style="color: #FFF200;">🚀 Résultats & Apprentissages :</strong></p>
+                    <ul style="margin-left: 1.5rem; line-height: 1.8;">
+                        <li>✅ Logiciel <strong>entièrement fonctionnel et opérationnel</strong></li>
+                        <li>✅ <strong>Amélioration du suivi</strong> des projets pour les chefs de projet</li>
+                        <li>✅ <strong>Compétences acquises</strong> en VBA, Excel, et gestion de projet</li>
+                        <li>✅ Expérience <strong>professionnelle précieuse</strong> dans un contexte industrie réel</li>
+                        <li>✅ Compréhension des <strong>besoins métier</strong> et capacité à les transformer en solutions logicielles</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="report-specs">
+                <img src="assets/images/VscodeIconsFileTypeExcel2.svg" height="150px" width="150px" style="margin-left: 2.5em;" alt="Projet Stage">
+                <div class="tech-tags"><span class="tag">VBA</span><span class="tag">EXCEL</span><span class="tag">AUTOMATION</span><span class="tag">MACROS</span><span class="tag">DASHBOARD</span></div>
+                <div class="specs-box">
+                    <h4>COMPÉTENCES</h4>
+                    <ul class="specs-list">
+                        <li>Réaliser un développement d'applications</li>
+                        <li>Optimiser des applications informatiques</li>
+                        <li>Gérer des données de l'information</li>
+                        <li>Conduire un projet</li>
+                        <li>Travailler dans une équipe informatique</li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+
+        <!-- ALTERNANCE -->
+        <div class="season-header">
+            <div class="season-title">ALTERNANCE</div>
+            <div class="season-line"></div>
+        </div>
+        <div class="season-intro">
+            <p><strong style="color: #FFF200;">Alternance chez ORANO PROJETS</strong> (même entreprise que mon stage).
+            Ma première mission a été la <strong>maintenance corrective et évolutive</strong> du logiciel <strong>Excel/VBA</strong>
+            développé durant mon stage, afin de le fiabiliser, l'améliorer et l'adapter aux besoins réels des chefs de projet
+            (nouvelles fonctionnalités, performance, ergonomie).</p>
+        </div>
+
+        <div class="lifecycle-callout">
+            <span class="badge-cycle">Cycle complet</span>
+            De la <strong>réception du besoin</strong> à la <strong>livraison</strong> et la <strong>formation</strong>, je pilote tout : cadrage, spécifications, conception VBA/Excel, développement, tests, packaging, documentation, accompagnement utilisateurs, notes de version, check-list de tests et plan de support pour garantir adoption et pérennité. Je suis l'interface directe avec les métiers, je priorise et arbitre, j'assure la conformité (qualité / sécurité / délais) et j'organise la transition vers l'exploitation avec support post-livraison.
+        </div>
+
+        <!-- ALT-P1 -->
+        <article class="report-card">
+            <div class="report-content">
+                <div class="project-header">
+                    <div>
+                        <div class="project-id">ALT-01</div>
+                        <h3 class="project-title">Logiciel VBA - Suivi Projets</h3>
+                    </div>
+                </div>
+                <div class="report-text">
+                    <p><strong style="color: #FFF200;">🎯 Contexte :</strong> Poursuite chez <strong>ORANO PROJETS</strong> en alternance.
+                    Prise en charge de la <strong>maintenance</strong> du logiciel <strong>Excel/VBA</strong> conçu pendant mon stage
+                    (outil de suivi des activités et des équipes pour les chefs de projet).</p>
+
+                    <p><strong style="color: #FFF200;">🛠️ Travaux réalisés :</strong></p>
+                    <ul style="margin-left: 1.5rem; line-height: 1.8;">
+                        <li>✓ <strong>Maintenance corrective</strong> : correction de bugs, robustesse des macros, gestion des erreurs</li>
+                        <li>✓ <strong>Maintenance évolutive</strong> : ajout de nouvelles fonctionnalités demandées (filtres, exports, indicateurs)</li>
+                        <li>✓ <strong>Refactoring VBA</strong> : simplification des modules, factorisation des procédures, nommage clair</li>
+                        <li>✓ <strong>Performance</strong> : optimisation des boucles, limitation des recalculs, usage d'Arrays/Dictionary</li>
+                        <li>✓ <strong>Ergonomie/UX</strong> : formulaires plus intuitifs, messages utilisateurs, raccourcis</li>
+                        <li>✓ <strong>Industrialisation</strong> : versionning, packaging du fichier « macro-enabled », et notes de version</li>
+                        <li>✓ <strong>Support utilisateurs</strong> : documentation, pas-à-pas, et accompagnement des chefs de projet</li>
+                        <li>✓ <strong>Création de nouveaux outils Excel/VBA</strong> : modules dédiés au suivi d'activité et de projet (modèles, formulaires, dashboards)</li>
+                        <li>✓ <strong><span class="badge-cycle">Cycle complet</span></strong> recueil du besoin, spécifications, développement, tests, livraison, documentation et formation utilisateurs</li>
+                    </ul>
+
+                    <p><strong style="color: #FFF200;">🚀 Résultats :</strong> outil plus <strong>fiable</strong>,
+                    <strong>rapide</strong> et <strong>simple à utiliser</strong>, réduction des erreurs de saisie et
+                    adoption renforcée par l'équipe gestion de projets.</p>
+                </div>
+            </div>
+            <div class="report-specs">
+                <img src="assets/images/VscodeIconsFileTypeExcel2.svg" height="150px" width="150px" style="margin-left: 2.5em;" alt="Maintenance Logiciel VBA">
+                <div class="tech-tags"><span class="tag">VBA</span><span class="tag">EXCEL</span><span class="tag">MAINTENANCE</span><span class="tag">TMA</span><span class="tag">PERFORMANCE</span><span class="tag">UX</span></div>
+                <div class="specs-box">
+                    <h4>COMPÉTENCES</h4>
+                    <ul class="specs-list">
+                        <li>Réaliser un développement d'applications</li>
+                        <li>Optimiser des applications informatiques</li>
+                        <li>Conduire un projet</li>
+                        <li>Travailler dans une équipe informatique</li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+
+        <!-- ALT-P2 -->
+        <article class="report-card">
+            <div class="report-content">
+                <div class="project-header">
+                    <div>
+                        <div class="project-id">ALT-02</div>
+                        <h3 class="project-title">Outils internes VBA</h3>
+                    </div>
+                </div>
+                <div class="report-text">
+                    <p><strong style="color: #FFF200;">🎯 Objectif :</strong> concevoir de <strong>nouveaux logiciels Excel/VBA</strong> internes pour faciliter le <strong>suivi d’activité et de projet</strong> chez Orano Projets.</p>
+                    <p><strong style="color: #FFF200;">🛠️ Réalisations clés :</strong></p>
+                    <ul style="margin-left: 1.5rem; line-height: 1.8;">
+                        <li>✓ Modèles Excel prêts à l’emploi (saisie guidée, contrôles de cohérence, validations).</li>
+                        <li>✓ Formulaires et macros dédiés au suivi des tâches, charges, jalons et risques.</li>
+                        <li>✓ Dashboards automatisés (KPI d’avancement, alertes, filtres multi-projets).</li>
+                        <li>✓ Packaging et notes de version pour chaque livraison interne.</li>
+                        <li>✓ <strong><span class="badge-cycle">Cycle complet</span></strong> besoin → conception → dev/tests → livraison → doc & formation.</li>
+                    </ul>
+                    <p><strong style="color: #FFF200;">🚀 Impact :</strong> réduction du temps de reporting, meilleure visibilité multi-projets, et adoption facilitée grâce à l’UX simplifiée.</p>
+                </div>
+            </div>
+            <div class="report-specs">
+                <img src="assets/images/VscodeIconsFileTypeExcel2.svg" height="150px" width="150px" style="margin-left: 2.5em;" alt="Outils internes VBA">
+                <div class="tech-tags"><span class="tag">VBA</span><span class="tag">EXCEL</span><span class="tag">AUTOMATION</span><span class="tag">REPORTING</span></div>
+                <div class="specs-box">
+                    <h4>COMPÉTENCES</h4>
+                    <ul class="specs-list">
+                        <li>Réaliser un développement d'applications</li>
+                        <li>Optimiser des applications informatiques</li>
+                        <li>Gérer des données de l'information</li>
+                        <li>Conduire un projet</li>
+                        <li>Travailler dans une équipe informatique</li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+
+    </div>
+
+    <footer>
+        <p>PORTFOLIO DE JOSEPH MULLIEZ // ÉTUDIANT EN BUT INFORMATIQUE</p>
+        <p>&copy; 2024-2026 | IUT DE LANNION | Tous droits réservés</p>
+        <p style="margin-top: 1rem; font-size: 0.75rem; color: #555;">Développé avec passion pour démontrer excellence technique et créativité</p>
+    </footer>
+
+    <script src="portfolio.js"></script>
+</body>
+
+</html>

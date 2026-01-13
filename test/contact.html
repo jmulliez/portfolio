@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Joseph Mulliez</title>
+    <meta name="description" content="Contactez Joseph Mulliez via le formulaire ou par email.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Russo+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+    <div id="speedometer-container">
+        <div class="gear-indicator" id="gear">N</div>
+        <div class="gauge-body">
+            <div class="gauge-rim"></div>
+            <div class="needle" id="needle"></div>
+            <div class="needle-center"></div>
+            <div class="speed-readout">
+                <span class="speed-value" id="speed-val">0</span>
+                <span class="speed-unit">KM/H</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <nav class="main-nav">
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">ACCUEIL</a></li>
+                <li><a href="portfolio.html" class="nav-link">PROJETS</a></li>
+                <li><a href="alternance.html" class="nav-link">ALTERNANCE</a></li>
+                <li><a href="contact.html" class="nav-link active">CONTACT</a></li>
+            </ul>
+        </nav>
+
+        <header class="hero-section hero-modern">
+            <div class="hero-content">
+                <div class="hero-text-content">
+                    <h1>Contact <span>Direct</span></h1>
+                    <div class="hero-role">JE RÉPONDS RAPIDEMENT</div>
+                    <p class="hero-description">Envoyez-moi un message via le formulaire ou écrivez directement à l'adresse ci-dessous. Chaque demande reçoit une réponse personnalisée.</p>
+                    <div class="contact-quick">
+                        <div class="quick-item">
+                            <div class="quick-label">Email</div>
+                            <div class="quick-value"><a href="mailto:mulliezjoseph5@gmail.com">mulliezjoseph5@gmail.com</a></div>
+                        </div>
+                        <div class="quick-item">
+                            <div class="quick-label">Disponibilités</div>
+                            <div class="quick-value">Lun - Ven · 9h - 19h</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-panel">
+                    <h2>Formulaire de contact</h2>
+                    <form class="contact-form" id="contactForm" action="https://formspree.io/f/xrbeakpp" method="POST" accept-charset="UTF-8">
+                        <label for="name">Nom complet</label>
+                        <input type="text" id="name" name="name" placeholder="Votre nom" required>
+
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="vous@example.com" required>
+
+                        <label for="subject">Sujet</label>
+                        <input type="text" id="subject" name="subject" placeholder="Objet de votre message" required>
+
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Votre message" required></textarea>
+
+                        <button type="submit" class="btn-primary">Envoyer</button>
+                        <p class="form-note" id="formStatus"></p>
+                    </form>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <footer>
+        <p>PORTFOLIO DE JOSEPH MULLIEZ // CONTACT</p>
+        <p>&copy; 2024-2026 | IUT DE LANNION | Tous droits réservés</p>
+    </footer>
+
+    <script src="portfolio.js"></script>
+    <script>
+        // Gestion envoi formulaire contact avec Formspree
+        const form = document.getElementById('contactForm');
+        const status = document.getElementById('formStatus');
+        
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const data = new FormData(form);
+            
+            status.textContent = 'Envoi en cours...';
+            status.style.color = '#FFF200';
+            
+            try {
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: data,
+                    headers: { 'Accept': 'application/json' }
+                });
+                
+                if (response.ok) {
+                    status.textContent = '✓ Message envoyé avec succès ! Je vous répondrais le plus rapidement possible.';
+                    status.style.color = '#4CAF50';
+                    form.reset();
+                } else {
+                    status.textContent = '✗ Erreur lors de l\'envoi. Essayez à nouveau ou écrivez directement à mulliezjoseph5@gmail.com.';
+                    status.style.color = '#DC0000';
+                }
+            } catch (error) {
+                status.textContent = '✗ Erreur réseau. Vérifiez votre connexion ou contactez-moi directement.';
+                status.style.color = '#DC0000';
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,831 @@
+:root {
+    --ferrari-red: #DC0000;
+    --ferrari-yellow: #FFF200;
+    --carbon-dark: #0f0f0f;
+    --carbon-panel: #161616;
+    --text-white: #ffffff;
+    --text-gray: #b0b0b0;
+    --track-gray: #333333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Rajdhani', sans-serif;
+    background-color: #050505;
+    background-image: radial-gradient(circle at 50% 50%, #1a1a1a 0%, #050505 100%);
+    color: var(--text-white);
+    line-height: 1.6;
+    font-size: 20px;
+    padding: 2rem;
+    padding-bottom: 150px;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--carbon-dark);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--ferrari-red);
+    border: 2px solid var(--carbon-dark);
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Russo One', sans-serif;
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+.hero-section {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 2rem;
+    margin-bottom: 4rem;
+    background: var(--carbon-panel);
+    padding: 2rem;
+    border-top: 5px solid var(--ferrari-red);
+    border-bottom: 1px solid var(--track-gray);
+}
+
+.hero-section.hero-modern {
+    grid-template-columns: 1fr;
+    padding: 0;
+    border: none;
+    border-bottom: 1px solid var(--track-gray);
+    overflow: hidden;
+    margin-bottom: 3rem;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    align-items: center;
+    min-height: 300px;
+}
+
+.hero-text-content {
+    background: var(--carbon-panel);
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-image-large {
+    width: 100%;
+    height: 100%;
+    min-height: 280px;
+    max-height: 320px;
+    overflow: hidden;
+    position: relative;
+}
+
+.hero-image-large img {
+    width: 350px;
+    height: 300px;
+    object-fit: cover;
+    filter: grayscale(20%);
+    transition: filter 0.3s;
+    border-radius: 25px;
+
+}
+
+.hero-image-large:hover img {
+    filter: grayscale(0%);
+}
+
+.hero-description {
+    font-size: 1.1rem;
+    color: #ccc;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+.hero-section.hero-centered {
+    grid-template-columns: 1fr;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-pic {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.profile-pic-centered {
+    width: 180px;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: 1rem auto;
+    border: 3px solid var(--ferrari-red);
+}
+
+.profile-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 2px solid var(--track-gray);
+    filter: grayscale(30%);
+}
+
+.profile-pic-centered img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: none;
+    filter: grayscale(20%);
+}
+
+.hero-text-top {
+    text-align: center;
+}
+
+.hero-text-top h1 {
+    font-size: 3.5rem;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.hero-text-top span {
+    color: var(--ferrari-red);
+}
+
+.hero-text h1 {
+    font-size: 3.5rem;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.hero-text span {
+    color: var(--ferrari-red);
+}
+
+.hero-role {
+    color: var(--ferrari-yellow);
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.btn-social {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    font-weight: 700;
+    border: 1px solid transparent;
+    transition: 0.3s;
+}
+
+.btn-social:hover {
+    border-color: var(--ferrari-red);
+    color: var(--ferrari-red);
+}
+
+/* NAVIGATION MENU */
+.main-nav {
+    margin-bottom: 2rem;
+    background: var(--carbon-panel);
+    padding: 1rem 0;
+    border-left: 4px solid var(--ferrari-yellow);
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    padding: 0 2rem;
+    flex-wrap: wrap;
+}
+
+.nav-link {
+    color: var(--text-gray);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: 0.3s;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid transparent;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--ferrari-red);
+    border-bottom-color: var(--ferrari-red);
+}
+
+/* INTRODUCTION SECTION */
+.intro-section {
+    background: var(--carbon-panel);
+    padding: 2.5rem;
+    margin-bottom: 3rem;
+    border-left: 6px solid var(--ferrari-yellow);
+    border-radius: 4px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.intro-section h2 {
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 1.5rem;
+    text-shadow: 1px 1px 0px var(--ferrari-red);
+}
+
+.intro-section p {
+    font-size: 1.25rem;
+    color: #ccc;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+.intro-section p:last-child {
+    margin-bottom: 0;
+}
+
+.season-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 4rem 0 2rem 0;
+}
+
+.season-title {
+    font-size: 2.5rem;
+    color: var(--text-white);
+    text-shadow: 2px 2px 0px var(--ferrari-red);
+}
+
+.season-line {
+    flex-grow: 1;
+    height: 4px;
+    background: linear-gradient(90deg, var(--ferrari-red), transparent);
+}
+
+.season-intro {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-left: 4px solid var(--ferrari-yellow);
+    border-radius: 4px;
+    font-size: 1.05rem;
+    color: #bbb;
+    line-height: 1.8;
+}
+
+.season-intro p {
+    margin: 0;
+}
+
+.report-card {
+    background: var(--carbon-panel);
+    margin-bottom: 3rem;
+    border-left: 6px solid var(--ferrari-red);
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.report-content {
+    padding: 2rem;
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid var(--track-gray);
+    padding-bottom: 1rem;
+}
+
+.project-id {
+    color: var(--ferrari-yellow);
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+.project-title {
+    font-size: 2.35rem;
+    color: white;
+    margin-top: 0.2rem;
+}
+
+.report-text p {
+    margin-bottom: 1rem;
+    font-size: 1.32rem;
+    color: #d0d0d0;
+    text-align: justify;
+}
+
+.report-specs {
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.project-img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    object-fit: cover;
+    border: 1px solid var(--track-gray);
+    border-radius: 6px;
+    margin: 0 0 1rem 0;
+}
+.img-orano{
+    
+}
+
+.specs-box {
+    background: linear-gradient(135deg, rgba(255, 242, 0, 0.08), rgba(220, 0, 0, 0.08));
+    border: 1px solid var(--track-gray);
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+}
+
+.specs-box h4 {
+    color: var(--ferrari-yellow);
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.specs-list {
+    list-style: none;
+    font-size: 0.95rem;
+    color: #f5f5f5;
+    display: grid;
+    gap: 0.35rem;
+    padding-left: 0;
+}
+
+.specs-list li {
+    margin: 0;
+    padding: 0.55rem 0.75rem 0.55rem 1.6rem;
+    position: relative;
+    background: rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(255, 242, 0, 0.25);
+    border-left: 4px solid var(--ferrari-yellow);
+    border-radius: 6px;
+    font-weight: 800;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+}
+
+.specs-list li::before {
+    content: "›";
+    color: var(--ferrari-yellow);
+    position: absolute;
+    left: 0.6rem;
+    font-weight: 900;
+}
+
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tag {
+    background: #000;
+    color: white;
+    padding: 0.3rem 0.6rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    border: 1px solid #333;
+    text-transform: uppercase;
+}
+
+.btn-action {
+    display: block;
+    text-align: center;
+    background: var(--ferrari-red);
+    color: white;
+    padding: 0.8rem;
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: auto;
+    transition: 0.2s;
+}
+
+.btn-action:hover {
+    background: #ff3333;
+}
+
+.btn-doc {
+    background: transparent;
+    border: 1px solid var(--text-white);
+    margin-top: 0.5rem;
+}
+
+.btn-doc:hover {
+    background: white;
+    color: black;
+}
+
+.lifecycle-callout {
+    background: linear-gradient(135deg, rgba(255, 242, 0, 0.14), rgba(220, 0, 0, 0.12));
+    border: 1px solid var(--track-gray);
+    border-left: 6px solid var(--ferrari-yellow);
+    padding: 1.25rem 1.5rem;
+    margin: 1.5rem 0 2rem 0;
+    border-radius: 10px;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.4);
+    color: #f5f5f5;
+    line-height: 1.7;
+    font-size: 1.18rem;
+}
+
+.lifecycle-callout strong {
+    color: var(--ferrari-yellow);
+    letter-spacing: 0.5px;
+}
+
+.badge-cycle {
+    display: inline-block;
+    background: rgba(255, 242, 0, 0.16);
+    border: 1px solid rgba(255, 242, 0, 0.45);
+    color: #fff;
+    padding: 0.25rem 0.5rem;
+    margin-right: 0.4rem;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    border-radius: 4px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.stat-card {
+    background: linear-gradient(135deg, rgba(255, 242, 0, 0.1), rgba(220, 0, 0, 0.12));
+    border: 1px solid var(--track-gray);
+    border-radius: 10px;
+    padding: 1.2rem;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.35);
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.stat-value {
+    font-family: 'Russo One', sans-serif;
+    font-size: 2rem;
+    color: var(--ferrari-yellow);
+    letter-spacing: 1px;
+}
+
+.stat-label {
+    font-size: 0.95rem;
+    color: #e0e0e0;
+    line-height: 1.5;
+}
+
+footer {
+    text-align: center;
+    margin-top: 5rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    border-top: 4px solid var(--ferrari-red);
+    color: #666;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#speedometer-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 200px;
+    height: 120px;
+    z-index: 1000;
+    font-family: 'Rajdhani', sans-serif;
+    pointer-events: none;
+}
+
+.gauge-body {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 180px;
+    height: 90px;
+    background: #111;
+    border-top-left-radius: 90px;
+    border-top-right-radius: 90px;
+    border: 4px solid #333;
+    border-bottom: none;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+}
+
+.gauge-rim {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 90px;
+    border-top-right-radius: 90px;
+    background: conic-gradient(from 270deg, transparent 0deg, transparent 10deg, #00ff00 10deg, #ffff00 100deg, #ff0000 150deg, transparent 180deg);
+    opacity: 0.3;
+}
+
+.needle {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 4px;
+    height: 80px;
+    background: var(--ferrari-red);
+    transform-origin: bottom center;
+    transform: rotate(-90deg);
+    transition: transform 0.1s linear;
+    z-index: 2;
+    box-shadow: 0 0 5px var(--ferrari-red);
+}
+
+.needle-center {
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    background: #333;
+    border-radius: 50%;
+    z-index: 3;
+}
+
+.speed-readout {
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    z-index: 4;
+}
+
+.speed-value {
+    font-family: 'Russo One', sans-serif;
+    font-size: 2.5rem;
+    line-height: 1;
+    display: block;
+}
+
+.speed-unit {
+    font-size: 0.8rem;
+    color: #888;
+    font-weight: 700;
+}
+
+.gear-indicator {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--carbon-dark);
+    border: 2px solid var(--ferrari-yellow);
+    color: var(--ferrari-yellow);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Russo One', sans-serif;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(255, 242, 0, 0.2);
+    z-index: 5;
+}
+
+/* CONTACT PAGE */
+.contact-quick {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+}
+
+.quick-item {
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--track-gray);
+    border-radius: 10px;
+}
+
+.quick-label {
+    font-size: 0.9rem;
+    color: var(--text-gray);
+    letter-spacing: 1px;
+}
+
+.quick-value a,
+.quick-value {
+    color: var(--text-white);
+    font-size: 1.05rem;
+    text-decoration: none;
+}
+
+.contact-panel {
+    background: var(--carbon-panel);
+    padding: 2.25rem;
+    border-left: 4px solid var(--ferrari-red);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-panel h2 {
+    font-size: 1.6rem;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+}
+
+.contact-form label {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    background: #0b0b0b;
+    border: 1px solid var(--track-gray);
+    color: var(--text-white);
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: 2px solid var(--ferrari-red);
+}
+
+.btn-primary {
+    background: var(--ferrari-red);
+    color: #fff;
+    border: none;
+    padding: 0.9rem 1.2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: transform 0.1s ease, box-shadow 0.2s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 18px rgba(220, 0, 0, 0.35);
+}
+
+.form-note {
+    color: var(--text-gray);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+    .hero-content {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+
+    .hero-text-content {
+        padding: 2rem;
+    }
+
+    .hero-image-large {
+        min-height: 300px;
+    }
+
+    .hero-section {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .profile-pic {
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .report-card {
+        grid-template-columns: 1fr;
+    }
+
+    .report-specs {
+        border-top: 1px solid var(--track-gray);
+    }
+
+    .project-img {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        height: auto;
+    }
+
+    #speedometer-container {
+        width: 150px;
+        height: 90px;
+        bottom: 10px;
+        right: 10px;
+    }
+
+    .gauge-body {
+        width: 140px;
+        height: 70px;
+        border-top-left-radius: 70px;
+        border-top-right-radius: 70px;
+    }
+
+    .needle {
+        height: 60px;
+    }
+
+    .gauge-rim {
+        border-top-left-radius: 70px;
+        border-top-right-radius: 70px;
+    }
+
+    .speed-value {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 1rem;
+    }
+
+    .hero-text-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .nav-links {
+        gap: 1rem;
+    }
+
+    .project-title {
+        font-size: 1.5rem;
+    }
+
+    .report-card:hover {
+        transform: none;
+    }
+
+    .hero-content {
+        min-height: auto;
+    }
+}
