@@ -828,4 +828,49 @@ footer {
     .hero-content {
         min-height: auto;
     }
+
+    .business-lines {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .business-card {
+        flex: 0 1 auto;
+    }
+}
+
+/* Business Lines & Cards */
+.business-lines {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.business-card {
+    background: linear-gradient(135deg, var(--ferrari-red) 0%, #880000 100%);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 2px solid var(--ferrari-red);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(220, 0, 0, 0.2);
+}
+
+.business-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(220, 0, 0, 0.4);
+    border-color: var(--ferrari-yellow);
+}
+
+.business-card h3 {
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    color: var(--ferrari-yellow);
+}
+
+.business-card p {
+    color: var(--text-gray);
+    font-size: 0.95rem;
+    line-height: 1.6;
 }
