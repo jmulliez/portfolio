@@ -947,3 +947,23 @@ footer {
     font-size: 0.95rem;
     line-height: 1.6;
 }
+
+/* Competence Explanation Box */
+.competence-explanation {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #475569;
+}
+
+.competence-explanation h5 {
+    color: #cbd5e1;
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+}
+
+.competence-explanation p {
+    color: #94a3b8;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
