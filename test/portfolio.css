@@ -857,24 +857,24 @@ footer {
 }
 
 .business-card {
-    background: linear-gradient(135deg, var(--ferrari-red) 0%, #880000 100%);
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
     padding: 2rem;
     border-radius: 8px;
-    border: 2px solid var(--ferrari-red);
+    border: 2px solid #334155;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(220, 0, 0, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .business-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(220, 0, 0, 0.4);
-    border-color: var(--ferrari-yellow);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    border-color: #64748b;
 }
 
 .business-card h3 {
     margin-bottom: 1rem;
     font-size: 1.3rem;
-    color: var(--ferrari-yellow);
+    color: #94a3b8;
 }
 
 .business-card p {
@@ -885,24 +885,24 @@ footer {
 
 /* Large Stats Grid */
 .stat-card-large {
-    background: linear-gradient(135deg, #1a3a4a 0%, #0d1f2d 100%);
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
     padding: 1.5rem;
     border-radius: 8px;
-    border: 2px solid var(--ferrari-red);
+    border: 2px solid #334155;
     text-align: center;
-    box-shadow: 0 4px 15px rgba(220, 0, 0, 0.15);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
 }
 
 .stat-card-large:hover {
     transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(220, 0, 0, 0.25);
-    border-color: var(--ferrari-yellow);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    border-color: #64748b;
 }
 
 .stat-card-large .stat-value {
     font-size: 2rem;
-    color: var(--ferrari-yellow);
+    color: #cbd5e1;
     font-weight: bold;
     margin-bottom: 0.5rem;
 }
@@ -922,22 +922,22 @@ footer {
 }
 
 .presence-card {
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
     padding: 1.5rem;
     border-radius: 8px;
-    border-left: 4px solid var(--ferrari-red);
+    border-left: 4px solid #475569;
     transition: all 0.3s ease;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .presence-card:hover {
     transform: translateX(5px);
-    border-left-color: var(--ferrari-yellow);
-    box-shadow: 0 6px 18px rgba(220, 0, 0, 0.2);
+    border-left-color: #94a3b8;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
 }
 
 .presence-card h3 {
-    color: var(--ferrari-yellow);
+    color: #cbd5e1;
     margin-bottom: 1rem;
     font-size: 1.2rem;
 }
