@@ -838,6 +838,14 @@ footer {
     .business-card {
         flex: 0 1 auto;
     }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .presence-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* Business Lines & Cards */
@@ -870,6 +878,71 @@ footer {
 }
 
 .business-card p {
+    color: var(--text-gray);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Large Stats Grid */
+.stat-card-large {
+    background: linear-gradient(135deg, #1a3a4a 0%, #0d1f2d 100%);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 2px solid var(--ferrari-red);
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(220, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+.stat-card-large:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(220, 0, 0, 0.25);
+    border-color: var(--ferrari-yellow);
+}
+
+.stat-card-large .stat-value {
+    font-size: 2rem;
+    color: var(--ferrari-yellow);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.stat-card-large .stat-label {
+    font-size: 0.9rem;
+    color: var(--text-gray);
+    line-height: 1.4;
+}
+
+/* Presence Grid */
+.presence-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.presence-card {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--ferrari-red);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.presence-card:hover {
+    transform: translateX(5px);
+    border-left-color: var(--ferrari-yellow);
+    box-shadow: 0 6px 18px rgba(220, 0, 0, 0.2);
+}
+
+.presence-card h3 {
+    color: var(--ferrari-yellow);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.presence-card p {
     color: var(--text-gray);
     font-size: 0.95rem;
     line-height: 1.6;
