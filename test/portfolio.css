@@ -1117,3 +1117,212 @@ footer {
     line-height: 1.6;
     margin: 0;
 }
+
+/* 3ÈME ANNÉE HIGHLIGHT */
+.year3-highlight {
+    background: linear-gradient(135deg, rgba(220, 0, 0, 0.15) 0%, rgba(255, 242, 0, 0.08) 100%);
+    border: 2px solid var(--ferrari-red);
+    border-radius: 8px;
+    padding: 3rem;
+    margin: 3rem 0;
+    box-shadow: 0 0 30px rgba(220, 0, 0, 0.2), inset 0 0 20px rgba(255, 242, 0, 0.03);
+}
+
+.year3-highlight h2 {
+    color: var(--ferrari-yellow);
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    text-shadow: 0 0 10px rgba(255, 242, 0, 0.3);
+    letter-spacing: 1px;
+}
+
+.year3-container {
+    display: grid;
+    gap: 2.5rem;
+}
+
+.year3-section {
+    background: rgba(22, 22, 22, 0.6);
+    border-left: 4px solid var(--ferrari-red);
+    padding: 2rem;
+    border-radius: 6px;
+    backdrop-filter: blur(5px);
+}
+
+.year3-section h3 {
+    color: var(--ferrari-yellow);
+    font-size: 1.3rem;
+    margin-bottom: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.year3-section p {
+    color: var(--text-gray);
+    line-height: 1.8;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+}
+
+.year3-section p strong {
+    color: var(--ferrari-yellow);
+}
+
+.year3-skills {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.year3-skills li {
+    background: rgba(220, 0, 0, 0.08);
+    padding: 1.2rem;
+    border-radius: 4px;
+    border-left: 3px solid var(--ferrari-yellow);
+    color: var(--text-gray);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.year3-skills li strong {
+    color: var(--ferrari-yellow);
+    display: block;
+    margin-bottom: 0.4rem;
+}
+
+.missions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.mission-card {
+    background: rgba(255, 242, 0, 0.05);
+    border: 1px solid rgba(220, 0, 0, 0.3);
+    padding: 1.5rem;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.mission-card:hover {
+    background: rgba(255, 242, 0, 0.08);
+    border-color: var(--ferrari-red);
+    box-shadow: 0 0 15px rgba(220, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+.mission-badge {
+    display: inline-block;
+    background: var(--ferrari-red);
+    color: var(--text-white);
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 0.8rem;
+    width: fit-content;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.mission-card strong {
+    color: var(--ferrari-yellow);
+    font-size: 1.05rem;
+}
+
+.mission-card p {
+    color: var(--text-gray);
+    font-size: 0.9rem;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.highlight-impact {
+    background: linear-gradient(135deg, rgba(220, 0, 0, 0.2) 0%, rgba(255, 242, 0, 0.1) 100%) !important;
+    border-left: 6px solid var(--ferrari-yellow) !important;
+}
+
+.highlight-impact h3 {
+    color: var(--ferrari-yellow);
+}
+
+/* COMPÉTENCES CLÉS 3ÈME ANNÉE - MISE EN AVANT */
+.competence-item.year3-key {
+    background: linear-gradient(135deg, rgba(220, 0, 0, 0.15) 0%, rgba(255, 242, 0, 0.08) 100%) !important;
+    border-left: 5px solid var(--ferrari-red) !important;
+    border-top: 1px solid rgba(255, 242, 0, 0.3);
+    box-shadow: 0 0 20px rgba(220, 0, 0, 0.15), inset 0 0 15px rgba(255, 242, 0, 0.05);
+    position: relative;
+    padding: 1.5rem;
+    padding-left: 2rem;
+}
+
+.competence-item.year3-key::before {
+    content: "★";
+    position: absolute;
+    left: 0.8rem;
+    top: 1rem;
+    color: var(--ferrari-red);
+    font-size: 1.4rem;
+    text-shadow: 0 0 8px rgba(220, 0, 0, 0.4);
+}
+
+.competence-item.year3-key .competence-title {
+    color: var(--ferrari-red);
+    font-size: 1rem;
+    font-weight: 700;
+    text-shadow: 0 0 5px rgba(220, 0, 0, 0.2);
+}
+
+.competence-item.year3-key .competence-detail {
+    color: var(--text-white);
+    font-weight: 500;
+}
+
+.year3-key-badge {
+    display: inline-block;
+    background: var(--ferrari-red);
+    color: white;
+    padding: 0.3rem 0.6rem;
+    border-radius: 3px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-left: 0.8rem;
+    letter-spacing: 0.5px;
+    box-shadow: 0 0 8px rgba(220, 0, 0, 0.4);
+}
+
+@media (max-width: 768px) {
+    .year3-highlight {
+        padding: 2rem 1.5rem;
+    }
+
+    .year3-highlight h2 {
+        font-size: 1.4rem;
+    }
+
+    .year3-section {
+        padding: 1.5rem;
+    }
+
+    .missions-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .competence-item.year3-key {
+        padding-left: 1.5rem;
+    }
+
+    .competence-item.year3-key::before {
+        left: 0.5rem;
+        font-size: 1.2rem;
+    }
+}

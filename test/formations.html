@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JMulliez - Parcours Académique & Poursuite d'Études</title>
+    <meta name="description" content="Parcours académique de Joseph Mulliez - BAC, BUT Informatique, École d'Ingénieur">
+
+    <!-- Polices Racing / Tech -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Russo+One&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="portfolio.css">
+    <style>
+        /* TIMELINE PARCOURS */
+        .timeline-section {
+            margin: 4rem 0;
+        }
+
+        .timeline-section h2 {
+            text-align: center;
+            color: var(--ferrari-yellow);
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            text-shadow: 0 0 10px rgba(255, 242, 0, 0.3);
+        }
+
+        .timeline {
+            position: relative;
+            padding: 2rem 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, var(--ferrari-red) 0%, var(--ferrari-yellow) 50%, var(--ferrari-red) 100%);
+            border-radius: 2px;
+        }
+
+        .timeline-item {
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content {
+            margin-left: 0;
+            margin-right: 52%;
+            text-align: right;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content {
+            margin-left: 52%;
+            margin-right: 0;
+            text-align: left;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 20px;
+            background: var(--ferrari-red);
+            border: 4px solid var(--carbon-panel);
+            border-radius: 50%;
+            top: 1rem;
+            z-index: 10;
+            box-shadow: 0 0 15px rgba(220, 0, 0, 0.5);
+        }
+
+        .timeline-content {
+            background: rgba(22, 22, 22, 0.7);
+            border: 1px solid rgba(220, 0, 0, 0.3);
+            padding: 2rem;
+            border-radius: 8px;
+            backdrop-filter: blur(5px);
+            transition: all 0.3s ease;
+        }
+
+        .timeline-content:hover {
+            background: rgba(22, 22, 22, 0.9);
+            border-color: var(--ferrari-yellow);
+            box-shadow: 0 0 20px rgba(220, 0, 0, 0.2);
+            transform: translateY(-4px);
+        }
+
+        .timeline-year {
+            color: var(--ferrari-red);
+            font-weight: 700;
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 0 0 8px rgba(220, 0, 0, 0.3);
+        }
+
+        .timeline-title {
+            color: var(--ferrari-yellow);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+        }
+
+        .timeline-description {
+            color: var(--text-gray);
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+
+        .timeline-achievement {
+            display: flex;
+            gap: 0.8rem;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255, 242, 0, 0.2);
+        }
+
+        .achievement-icon {
+            color: var(--ferrari-yellow);
+            font-size: 1.2rem;
+        }
+
+        .achievement-text {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+        }
+
+        /* ÉCOLES D'INGÉNIEUR */
+        .schools-section {
+            margin: 5rem 0;
+        }
+
+        .schools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .school-card {
+            background: linear-gradient(135deg, rgba(220, 0, 0, 0.1) 0%, rgba(255, 242, 0, 0.05) 100%);
+            border: 2px solid var(--ferrari-red);
+            border-radius: 12px;
+            padding: 2.5rem;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .school-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(255, 242, 0, 0.1) 0%, transparent 70%);
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+
+        .school-card:hover {
+            border-color: var(--ferrari-yellow);
+            box-shadow: 0 0 30px rgba(220, 0, 0, 0.3);
+            transform: translateY(-8px);
+            background: linear-gradient(135deg, rgba(220, 0, 0, 0.15) 0%, rgba(255, 242, 0, 0.08) 100%);
+        }
+
+        .school-card:hover::before {
+            opacity: 1;
+            right: -20%;
+            top: -20%;
+        }
+
+        .school-status {
+            display: inline-block;
+            background: var(--ferrari-red);
+            color: white;
+            padding: 0.4rem 0.8rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            letter-spacing: 0.5px;
+        }
+
+        .school-status.candidate {
+            background: rgba(255, 242, 0, 0.8);
+            color: #000;
+        }
+
+        .school-status.target {
+            background: var(--ferrari-red);
+            color: white;
+        }
+
+        .school-name {
+            color: var(--ferrari-yellow);
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 0.8rem;
+        }
+
+        .school-location {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .school-description {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin: 1.5rem 0;
+        }
+
+        .school-specs {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 242, 0, 0.2);
+        }
+
+        .spec-item {
+            display: flex;
+            gap: 0.8rem;
+        }
+
+        .spec-label {
+            color: var(--ferrari-red);
+            font-weight: 600;
+            min-width: 80px;
+        }
+
+        .spec-value {
+            color: var(--text-gray);
+        }
+
+        /* PARCOURS STATS */
+        .parcours-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+
+        .stat-card {
+            background: rgba(22, 22, 22, 0.7);
+            border-left: 4px solid var(--ferrari-red);
+            padding: 2rem;
+            text-align: center;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-4px);
+            border-left-color: var(--ferrari-yellow);
+            box-shadow: 0 0 15px rgba(220, 0, 0, 0.2);
+        }
+
+        .stat-number {
+            color: var(--ferrari-yellow);
+            font-size: 2.5rem;
+            font-weight: 700;
+            display: block;
+        }
+
+        .stat-label {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .timeline::before {
+                left: 15px;
+            }
+
+            .timeline-item:nth-child(odd) .timeline-content,
+            .timeline-item:nth-child(even) .timeline-content {
+                margin-left: 60px;
+                margin-right: 0;
+                text-align: left;
+            }
+
+            .timeline-dot {
+                left: 15px;
+            }
+
+            .schools-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- COMPTEUR DE VITESSE (HUD) -->
+    <div id="speedometer-container">
+        <div class="gear-indicator" id="gear">N</div>
+        <div class="gauge-body">
+            <div class="gauge-rim"></div>
+            <div class="needle" id="needle"></div>
+            <div class="needle-center"></div>
+            <div class="speed-readout">
+                <span class="speed-value" id="speed-val">0</span>
+                <span class="speed-unit">KM/H</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <!-- NAVIGATION -->
+        <nav class="main-nav">
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">ACCUEIL</a></li>
+                <li><a href="projets.html" class="nav-link">PROJETS</a></li>
+                <li><a href="formations.html" class="nav-link active">FORMATIONS</a></li>
+                <li><a href="alternance.html" class="nav-link">ALTERNANCE</a></li>
+                <li><a href="contact.html" class="nav-link">CONTACT</a></li>
+            </ul>
+        </nav>
+
+        <!-- HEADER -->
+        <header class="hero-section">
+            <div class="profile-pic">
+                <img src="assets/images/pp.jpg" alt="Joseph Mulliez">
+            </div>
+            <div class="hero-text">
+                <h1>Joseph <span>Mulliez</span></h1>
+                <div class="hero-role">PARCOURS ACADÉMIQUE // POURSUITE D'ÉTUDES</div>
+                <p>
+                    Mon chemin vers une école d'ingénieur. Découvrez mon parcours depuis le BAC, mon expérience au BUT Informatique,
+                    et les écoles d'ingénieur vers lesquelles je m'oriente pour approfondir mes compétences en développement et innovation technologique.
+                </p>
+            </div>
+        </header>
+
+        <!-- TIMELINE PARCOURS -->
+        <section class="timeline-section">
+            <h2>📚 PARCOURS ACADÉMIQUE</h2>
+
+            <div class="timeline">
+                <!-- BAC -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">2021 - 2023</div>
+                        <div class="timeline-title">Baccalauréat Général</div>
+                        <div class="timeline-description">
+                            Lycée Naval de Brest - Établissement d'excellence
+                        </div>
+                        <div class="timeline-achievement">
+                            <div class="achievement-icon">✨</div>
+                            <div class="achievement-text">Spécialités : Mathématiques + NSI (Numérique et Sciences Informatiques)</div>
+                        </div>
+                        <div class="timeline-achievement">
+                            <div class="achievement-icon">🎯</div>
+                            <div class="achievement-text">Fondations en algorithmie et programmation Python</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BUT -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">2023 - 2026</div>
+                        <div class="timeline-title">BUT Informatique - Parcours A</div>
+                        <div class="timeline-description">
+                            IUT de Lannion - Réalisation d'applications, Parcours spécialisé en développement fullstack
+                        </div>
+                        <div class="timeline-achievement">
+                            <div class="achievement-icon">⚡</div>
+                            <div class="achievement-text"><strong>Stage en 2ème année</strong> chez Orano Projets (VBA/Excel)</div>
+                        </div>
+                        <div class="timeline-achievement">
+                            <div class="achievement-icon">🚀</div>
+                            <div class="achievement-text"><strong>Alternance en 3ème année</strong> chez Orano Projets (Maintenance & TMA)</div>
+                        </div>
+                        <div class="timeline-achievement">
+                            <div class="achievement-icon">💼</div>
+                            <div class="achievement-text">Cycle complet en développement : frontend, backend, databases, gestion de projet</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ÉCOLE D'INGÉNIEUR -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">2026 - 2029</div>
+                        <div class="timeline-title">École d'Ingénieur</div>
+                        <div class="timeline-description">
+                            Poursuite d'études pour approfondir les compétences en développement logiciel, architecture système, et innovation technologique
+                        </div>
+                        <div class="timeline-achievement">
+                            <div class="achievement-icon">🎓</div>
+                            <div class="achievement-text">Objectif : Diplôme d'Ingénieur en Informatique</div>
+                        </div>
+                        <div class="timeline-achievement">
+                            <div class="achievement-icon">🌍</div>
+                            <div class="achievement-text">Intérêts : Développement fullstack, Cloud computing, IA/ML</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- STATS PARCOURS -->
+        <section class="parcours-stats">
+            <div class="stat-card">
+                <span class="stat-number">6</span>
+                <span class="stat-label">Années d'études (BAC + BUT + Ingénieur)</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">8+</span>
+                <span class="stat-label">Projets académiques complétés</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">2</span>
+                <span class="stat-label">Missions en entreprise (Stage + Alternance)</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">50+</span>
+                <span class="stat-label">Compétences techniques développées</span>
+            </div>
+        </section>
+
+        <!-- ÉCOLES D'INGÉNIEUR -->
+        <section class="schools-section">
+            <h2>🎯 ÉCOLES D'INGÉNIEUR ENVISAGÉES</h2>
+
+            <div class="schools-grid">
+                <!-- ÉCOLE 1 : ENSTA -->
+                <div class="school-card">
+                    <span class="school-status target">Cible prioritaire</span>
+                    <div class="school-name">ENSTA Bretagne</div>
+                    <div class="school-location">📍 Brest, France</div>
+                    <div class="school-description">
+                        Grande école d'ingénieur orientée innovation, systèmes complexes et domaine maritime/défense, avec un solide département informatique.
+                    </div>
+                    <div class="school-specs">
+                        <div class="spec-item">
+                            <div class="spec-label">Spécialités</div>
+                            <div class="spec-value">Informatique, Systèmes complexes, IA/ML, Cyber</div>
+                        </div>
+                        <div class="spec-item">
+                            <div class="spec-label">Intérêts</div>
+                            <div class="spec-value">Innovation, systèmes embarqués, partenariats industriels</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ÉCOLE 2 : ENSICAEN ECSE -->
+                <div class="school-card">
+                    <span class="school-status target">Cible prioritaire</span>
+                    <div class="school-name">ENSICAEN — ECSE</div>
+                    <div class="school-location">📍 Caen, France</div>
+                    <div class="school-description">
+                        Parcours <strong>Électronique communicante & systèmes embarqués</strong> par apprentissage. Accent sur embarqué, IoT et communications.
+                    </div>
+                    <div class="school-specs">
+                        <div class="spec-item">
+                            <div class="spec-label">Voie</div>
+                            <div class="spec-value">Apprentissage (alternance)</div>
+                        </div>
+                        <div class="spec-item">
+                            <div class="spec-label">Spécialités</div>
+                            <div class="spec-value">IoT, RF/communications, embarqué temps réel, co-design soft/hard</div>
+                        </div>
+                        <div class="spec-item">
+                            <div class="spec-label">Intérêts</div>
+                            <div class="spec-value">Systèmes connectés, robustesse & sécurité, apprentissage industriel</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ÉCOLE 3 : ENSICAEN I3N -->
+                <div class="school-card">
+                    <span class="school-status target">Cible prioritaire</span>
+                    <div class="school-name">ENSICAEN — I3N</div>
+                    <div class="school-location">📍 Caen, France</div>
+                    <div class="school-description">
+                        Parcours <strong>Ingénierie des Installations Nucléaires et Instrumentation (I3N)</strong> par apprentissage. Focus instrumentation, sûreté et contrôle-commande.
+                    </div>
+                    <div class="school-specs">
+                        <div class="spec-item">
+                            <div class="spec-label">Voie</div>
+                            <div class="spec-value">Apprentissage (alternance)</div>
+                        </div>
+                        <div class="spec-item">
+                            <div class="spec-label">Spécialités</div>
+                            <div class="spec-value">Instrumentation, sûreté nucléaire, contrôle-commande, systèmes critiques</div>
+                        </div>
+                        <div class="spec-item">
+                            <div class="spec-label">Intérêts</div>
+                            <div class="spec-value">Secteur nucléaire, robustesse & sécurité, proximité industrielle</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CRITÈRES DE SÉLECTION -->
+        <section style="margin: 4rem 0; padding: 2rem; background: rgba(22, 22, 22, 0.7); border-radius: 8px; border-left: 4px solid var(--ferrari-red);">
+            <h3 style="color: var(--ferrari-yellow); margin-bottom: 1.5rem;">🎯 Critères de sélection</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+                <div>
+                    <h4 style="color: var(--ferrari-yellow); margin-bottom: 0.8rem;">📚 Académique</h4>
+                    <ul style="list-style: none; color: var(--text-gray); line-height: 1.8;">
+                        <li>✓ Parcours informatique spécialisé</li>
+                        <li>✓ Options développement/architecture</li>
+                        <li>✓ Projets applicatifs concrets</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: var(--ferrari-yellow); margin-bottom: 0.8rem;">🌍 Environnement</h4>
+                    <ul style="list-style: none; color: var(--text-gray); line-height: 1.8;">
+                        <li>✓ Dynamique d'innovation</li>
+                        <li>✓ Partenariats entreprises</li>
+                        <li>✓ Localisation attractive</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: var(--ferrari-yellow); margin-bottom: 0.8rem;">💼 Professionnalisation</h4>
+                    <ul style="list-style: none; color: var(--text-gray); line-height: 1.8;">
+                        <li>✓ Apprentissage en 3ème année</li>
+                        <li>✓ Stages pratiques intégrés</li>
+                        <li>✓ Débouchés professionnels</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>PARCOURS ACADÉMIQUE DE JOSEPH MULLIEZ // ÉTUDIANT EN BUT INFORMATIQUE</p>
+        <p>&copy; 2024-2026 | IUT DE LANNION | Tous droits réservés</p>
+    </footer>
+
+    <script src="portfolio.js"></script>
+</body>
+
+</html>
