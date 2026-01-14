@@ -176,7 +176,61 @@ Showcase de mes réalisations :
   - Tronc commun informatique
   - Spécialisations : Développement, Architecture
 
-### 💪 Compétences Techniques
+### 💪 Compétences du B.U.T. Informatique
+
+#### Parcours A : Réalisation d'applications - conception, développement, validation
+
+**6 compétences principales développées progressivement :**
+
+| Compétence | Année 1 | Année 2 | Année 3 |
+|:-----------|:-------:|:-------:|:-------:|
+| **🔨 Réaliser** | ✅ | ✅ | ✅ |
+| **⚙️ Optimiser** | ✅ | ✅ | ✅ |
+| **🛠️ Administrer** | ✅ | ✅ | ❌ |
+| **💾 Gérer** | ✅ | ✅ | ❌ |
+| **🎯 Conduire** | ✅ | ✅ | ❌ |
+| **👥 Collaborer** | ✅ | ✅ | ✅ |
+
+**Détail par année :**
+
+<details>
+<summary><strong>Année 1 - Fondamentaux</strong></summary>
+
+- **🔨 Réaliser** : Développer des applications informatiques simples
+- **⚙️ Optimiser** : Appréhender et construire des algorithmes
+- **🛠️ Administrer** : Installer et configurer un poste de travail
+- **💾 Gérer** : Concevoir et mettre en place une base de données à partir d'un cahier des charges client
+- **🎯 Conduire** : Identifier les besoins métiers des clients et des utilisateurs
+- **👥 Collaborer** : Identifier ses aptitudes pour travailler dans une équipe informatique
+
+</details>
+
+<details>
+<summary><strong>Année 2 - Approfondissement</strong></summary>
+
+- **🔨 Réaliser** : Partir des exigences et aller jusqu'à une application complète
+- **⚙️ Optimiser** : Sélectionner les algorithmes adéquats pour répondre à un problème donné
+- **🛠️ Administrer** : Déployer des services dans une architecture réseau
+- **💾 Gérer** : Optimiser une base de données, interroger avec une application et mettre en œuvre la sécurité
+- **🎯 Conduire** : Appliquer une démarche et un suivi de projet en fonction des besoins métiers des clients et des utilisateurs
+- **👥 Collaborer** : Situer son rôle et ses missions au sein d'une équipe informatique
+
+</details>
+
+<details>
+<summary><strong>Année 3 - Spécialisation (Parcours A)</strong></summary>
+
+> ⚠️ **Attention** : L'année 3 se concentre sur 3 compétences principales
+
+- **🔨 Réaliser** : Adapter des applications sur un ensemble de supports (embarqué, web, mobile, IoT...)
+- **⚙️ Optimiser** : Analyser et optimiser des applications
+- **👥 Collaborer** : Manager une équipe informatique
+
+*Les compétences "Administrer", "Gérer" et "Conduire" ne sont pas développées en année 3 du parcours A*
+
+</details>
+
+---
 
 #### Langages de programmation
 - Java (POO, Collections, Streams)
