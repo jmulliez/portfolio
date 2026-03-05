@@ -2,20 +2,20 @@
    VARIABLES & ROOT
    ============================================= */
 :root {
-    --ferrari-red: #DC0000;
-    --ferrari-red-bright: #ff1801;
-    --ferrari-yellow: #FFF200;
-    --ferrari-yellow-dim: rgba(255, 242, 0, 0.7);
-    --carbon-dark: #090909;
-    --carbon-panel: #111111;
-    --carbon-panel-2: #161616;
-    --text-white: #ffffff;
-    --text-gray: #a0a0a0;
-    --track-gray: #2a2a2a;
-    --glow-red: rgba(220, 0, 0, 0.5);
-    --glow-yellow: rgba(255, 242, 0, 0.4);
-    --glass-bg: rgba(255, 255, 255, 0.04);
-    --glass-border: rgba(255, 255, 255, 0.08);
+    --ferrari-red: #B52B2B;
+    --ferrari-red-bright: #CC3333;
+    --ferrari-yellow: #D4AA47;
+    --ferrari-yellow-dim: rgba(212, 170, 71, 0.6);
+    --carbon-dark: #0e0e10;
+    --carbon-panel: #161618;
+    --carbon-panel-2: #1a1a1c;
+    --text-white: #EDE9E3;
+    --text-gray: #8a8a96;
+    --track-gray: #2e2e32;
+    --glow-red: rgba(181, 43, 43, 0.25);
+    --glow-yellow: rgba(212, 170, 71, 0.2);
+    --glass-bg: rgba(255, 255, 255, 0.03);
+    --glass-border: rgba(255, 255, 255, 0.06);
 }
 
 /* =============================================
@@ -35,9 +35,9 @@ body {
     font-family: 'Rajdhani', sans-serif;
     background-color: var(--carbon-dark);
     background-image:
-        radial-gradient(ellipse at 20% 20%, rgba(220, 0, 0, 0.04) 0%, transparent 50%),
-        radial-gradient(ellipse at 80% 80%, rgba(255, 242, 0, 0.03) 0%, transparent 50%),
-        radial-gradient(circle at 50% 50%, #111 0%, #050505 100%);
+        radial-gradient(ellipse at 20% 20%, rgba(150, 40, 40, 0.025) 0%, transparent 55%),
+        radial-gradient(ellipse at 80% 80%, rgba(180, 150, 60, 0.015) 0%, transparent 55%),
+        radial-gradient(circle at 50% 50%, #131315 0%, #0a0a0c 100%);
     color: var(--text-white);
     line-height: 1.6;
     font-size: 18px;
@@ -46,15 +46,15 @@ body {
     overflow-x: hidden;
 }
 
-/* Background grid pattern */
+/* Background grid pattern — très subtil */
 body::before {
     content: '';
     position: fixed;
     inset: 0;
     background-image:
-        linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px);
-    background-size: 60px 60px;
+        linear-gradient(rgba(255,255,255,0.007) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.007) 1px, transparent 1px);
+    background-size: 80px 80px;
     pointer-events: none;
     z-index: 0;
 }
@@ -103,7 +103,7 @@ h1, h2, h3, h4 {
     padding: 0.85rem 0;
     border-left: 4px solid var(--ferrari-yellow);
     border-bottom: 1px solid rgba(255, 242, 0, 0.15);
-    box-shadow: 0 4px 30px rgba(0,0,0,0.6), 0 0 1px rgba(255,242,0,0.2);
+    box-shadow: 0 2px 16px rgba(0,0,0,0.4);
     transition: box-shadow 0.3s;
 }
 
@@ -157,7 +157,7 @@ h1, h2, h3, h4 {
 .nav-link:hover,
 .nav-link.active {
     color: var(--ferrari-red);
-    text-shadow: 0 0 12px var(--glow-red);
+    text-shadow: 0 0 8px var(--glow-red);
 }
 
 /* =============================================
@@ -181,7 +181,7 @@ h1, h2, h3, h4 {
     overflow: hidden;
     margin-bottom: 3.5rem;
     border-radius: 8px;
-    box-shadow: 0 0 60px rgba(220, 0, 0, 0.1), 0 20px 60px rgba(0,0,0,0.5);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.35);
 }
 
 .hero-content {
@@ -234,7 +234,7 @@ h1, h2, h3, h4 {
 
 .hero-text-content h1 span {
     color: var(--ferrari-red);
-    text-shadow: 0 0 20px rgba(220, 0, 0, 0.5);
+    text-shadow: none;
     display: inline-block;
 }
 
@@ -244,7 +244,7 @@ h1, h2, h3, h4 {
     letter-spacing: 4px;
     font-weight: 700;
     margin-bottom: 1.2rem;
-    text-shadow: 0 0 15px var(--glow-yellow);
+    text-shadow: none;
     font-family: 'Russo One', sans-serif;
 }
 
@@ -292,7 +292,7 @@ h1, h2, h3, h4 {
 .btn-social:hover {
     color: white;
     border-color: var(--ferrari-red);
-    box-shadow: 0 4px 20px var(--glow-red);
+    box-shadow: 0 3px 12px rgba(181,43,43,0.2);
     transform: translateY(-2px);
 }
 
@@ -345,7 +345,7 @@ h1, h2, h3, h4 {
 .season-title {
     font-size: 2rem;
     color: var(--text-white);
-    text-shadow: 2px 2px 0px var(--ferrari-red), 0 0 20px rgba(220,0,0,0.2);
+    text-shadow: 1px 1px 0px var(--ferrari-red);
     white-space: nowrap;
     font-family: 'Russo One', sans-serif;
     font-style: italic;
@@ -400,7 +400,7 @@ h1, h2, h3, h4 {
 
 .report-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 16px 50px rgba(0,0,0,0.6), 0 0 30px rgba(220,0,0,0.12);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
     border-left-color: var(--ferrari-red-bright);
 }
 
@@ -573,12 +573,12 @@ h1, h2, h3, h4 {
     transition: all 0.25s;
     border-radius: 3px;
     font-family: 'Russo One', sans-serif;
-    box-shadow: 0 4px 15px rgba(220,0,0,0.3);
+    box-shadow: 0 3px 10px rgba(181,43,43,0.18);
 }
 
 .btn-action:hover {
     background: linear-gradient(135deg, var(--ferrari-red-bright), var(--ferrari-red));
-    box-shadow: 0 6px 25px rgba(220,0,0,0.5);
+    box-shadow: 0 5px 18px rgba(181,43,43,0.25);
     transform: translateY(-2px);
 }
 
@@ -606,12 +606,12 @@ h1, h2, h3, h4 {
     transition: all 0.25s ease;
     font-family: 'Russo One', sans-serif;
     border-radius: 3px;
-    box-shadow: 0 4px 15px rgba(220,0,0,0.3);
+    box-shadow: 0 3px 10px rgba(181,43,43,0.18);
 }
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(220, 0, 0, 0.5);
+    box-shadow: 0 6px 20px rgba(181,43,43,0.22);
     background: linear-gradient(135deg, var(--ferrari-red-bright), var(--ferrari-red));
 }
 
@@ -717,7 +717,7 @@ h1, h2, h3, h4 {
     font-size: 2.2rem;
     color: var(--ferrari-yellow);
     letter-spacing: 1px;
-    text-shadow: 0 0 15px var(--glow-yellow);
+    text-shadow: none;
 }
 
 .stat-label {
@@ -740,7 +740,7 @@ h1, h2, h3, h4 {
     z-index: 1000;
     font-family: 'Rajdhani', sans-serif;
     pointer-events: none;
-    filter: drop-shadow(0 0 20px rgba(220, 0, 0, 0.4));
+    filter: drop-shadow(0 0 8px rgba(181, 43, 43, 0.2));
 }
 
 .gauge-body {
@@ -756,7 +756,7 @@ h1, h2, h3, h4 {
     border: 3px solid #222;
     border-bottom: none;
     overflow: hidden;
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.9), inset 0 0 15px rgba(0,0,0,0.5);
+    box-shadow: 0 0 14px rgba(0, 0, 0, 0.7), inset 0 0 8px rgba(0,0,0,0.4);
 }
 
 .gauge-body::before {
@@ -802,7 +802,7 @@ h1, h2, h3, h4 {
     transform: rotate(-90deg);
     transition: transform 0.08s linear;
     z-index: 2;
-    box-shadow: 0 0 8px var(--ferrari-red), 0 0 2px var(--ferrari-red-bright);
+    box-shadow: 0 0 4px rgba(181,43,43,0.4);
     border-radius: 2px 2px 0 0;
 }
 
@@ -860,7 +860,7 @@ h1, h2, h3, h4 {
     font-family: 'Russo One', sans-serif;
     font-size: 1.6rem;
     border-radius: 6px;
-    box-shadow: 0 0 15px var(--glow-yellow), inset 0 0 8px rgba(255,242,0,0.05);
+    box-shadow: 0 0 6px rgba(212,170,71,0.15);
     z-index: 5;
     transition: color 0.2s, border-color 0.2s, box-shadow 0.2s;
 }
@@ -1142,7 +1142,7 @@ footer::before {
     margin-bottom: 0.5rem;
     text-transform: uppercase;
     letter-spacing: 2px;
-    text-shadow: 0 0 15px var(--glow-yellow);
+    text-shadow: none;
 }
 
 .competences-but-section > p { color: var(--text-gray); font-size: 0.95rem; margin-bottom: 2rem; font-style: italic; }
@@ -1299,7 +1299,7 @@ footer::before {
     border-radius: 10px;
     padding: 3rem;
     margin: 3rem 0;
-    box-shadow: 0 0 40px rgba(220, 0, 0, 0.12);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
 }
 
 .year3-highlight h2 {
@@ -1307,7 +1307,7 @@ footer::before {
     text-align: center;
     font-size: 1.8rem;
     margin-bottom: 2rem;
-    text-shadow: 0 0 15px var(--glow-yellow);
+    text-shadow: none;
     letter-spacing: 1px;
 }
 
@@ -1443,7 +1443,7 @@ footer::before {
     border-radius: 50%;
     margin: 1rem auto;
     border: 3px solid var(--ferrari-red);
-    box-shadow: 0 0 20px var(--glow-red);
+    box-shadow: 0 0 8px rgba(181,43,43,0.2);
 }
 
 .profile-pic img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(30%); }
