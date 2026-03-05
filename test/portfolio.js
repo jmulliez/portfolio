@@ -1,3 +1,4 @@
+/* ------ SPEEDOMETER ------ */
 const needle = document.getElementById('needle');
 const speedVal = document.getElementById('speed-val');
 const gearInd = document.getElementById('gear');
@@ -36,8 +37,62 @@ window.addEventListener('scroll', () => {
     if (currentGear === 8) {
         gearInd.style.color = 'red';
         gearInd.style.borderColor = 'red';
+        gearInd.style.boxShadow = '0 0 15px rgba(255,0,0,0.6)';
     } else {
         gearInd.style.color = '#FFF200';
         gearInd.style.borderColor = '#FFF200';
+        gearInd.style.boxShadow = '0 0 15px rgba(255,242,0,0.3)';
     }
 });
+
+/* ------ SCROLL REVEAL ------ */
+const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+            // Stagger delay for siblings
+            const siblings = Array.from(entry.target.parentElement.children);
+            const idx = siblings.indexOf(entry.target);
+            entry.target.style.transitionDelay = `${idx * 80}ms`;
+            entry.target.classList.add('visible');
+            revealObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.reveal, .reveal-left, .report-card, .season-header, .stat-card, .mission-card, .business-card, .presence-card').forEach(el => {
+    if (!el.classList.contains('reveal') && !el.classList.contains('reveal-left')) {
+        el.classList.add('reveal');
+    }
+    revealObserver.observe(el);
+});
+
+/* ------ TYPING EFFECT ------ */
+const heroRole = document.querySelector('.hero-role');
+if (heroRole) {
+    const text = heroRole.textContent.trim();
+    heroRole.textContent = '';
+    heroRole.style.visibility = 'visible';
+    let i = 0;
+    const type = () => {
+        if (i < text.length) {
+            heroRole.textContent += text[i++];
+            setTimeout(type, 55);
+        }
+    };
+    setTimeout(type, 600);
+}
+
+/* ------ NAV ACTIVE ON SCROLL ------ */
+const navLinks = document.querySelectorAll('.nav-link');
+function setActiveNav() {
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    navLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        if (href === currentPage) {
+            link.classList.add('active');
+        } else {
+            link.classList.remove('active');
+        }
+    });
+}
+setActiveNav();
