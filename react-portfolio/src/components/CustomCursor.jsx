@@ -1,18 +1,33 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 const CustomCursor = () => {
-  const [position, setPosition] = useState({ x: -100, y: -100 });
+  const [hasMoved, setHasMoved] = useState(false);
   const [isHovering, setIsHovering] = useState(false);
   const [isF1, setIsF1] = useState(false);
+  const cursorRef = useRef(null);
+  const trailRef = useRef(null);
+  const hasMovedRef = useRef(false);
 
   useEffect(() => {
     let animationFrameId;
     
     const moveCursor = (e) => {
-        // Use requestAnimationFrame for smoother cursor
         cancelAnimationFrame(animationFrameId);
         animationFrameId = requestAnimationFrame(() => {
-            setPosition({ x: e.clientX, y: e.clientY });
+            const transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0) translate(-50%, -50%)`;
+
+            if (cursorRef.current) {
+              cursorRef.current.style.transform = transform;
+            }
+
+            if (trailRef.current) {
+              trailRef.current.style.transform = transform;
+            }
+
+            if (!hasMovedRef.current) {
+              hasMovedRef.current = true;
+              setHasMoved(true);
+            }
         });
     };
     
@@ -48,25 +63,26 @@ const CustomCursor = () => {
     };
   }, []);
 
-  // Avoid rendering cursor if it hasn't moved yet (e.g. mobile or initial load)
-  if (position.x === -100 && position.y === -100) return null;
+  if (!hasMoved) return null;
 
   return (
     <>
       <div 
-        className={`fixed pointer-events-none z-[9999] rounded-full mix-blend-exclusion transition-all duration-300 ease-out flex items-center justify-center -translate-x-1/2 -translate-y-1/2 ${
+        ref={cursorRef}
+        className={`fixed pointer-events-none z-[9999] rounded-full mix-blend-exclusion transition-[width,height,background-color,border-color,box-shadow,opacity] duration-150 ease-out flex items-center justify-center ${
             isHovering ? 'w-12 h-12 bg-transparent border border-white/50' : 'w-4 h-4 bg-white shadow-[0_0_10px_white]'
         } ${isF1 ? '!w-16 !h-16 !border-red-500 !bg-red-500/10 !mix-blend-normal' : ''}`} 
-        style={{ left: `${position.x}px`, top: `${position.y}px` }}
+        style={{ left: 0, top: 0, willChange: 'transform' }}
       >
         {isF1 && <span className="text-xl animate-bounce leading-none" style={{textShadow: '0 0 10px red'}}>🏎️</span>}
       </div>
       
       <div 
-        className={`fixed pointer-events-none z-[9998] rounded-full transition-all duration-500 ease-out -translate-x-1/2 -translate-y-1/2 ${
+        ref={trailRef}
+        className={`fixed pointer-events-none z-[9998] rounded-full transition-[width,height,background-color,filter,opacity] duration-200 ease-out ${
             isHovering ? 'w-24 h-24 bg-white/10 blur-xl' : 'w-10 h-10 bg-white/30 blur-md'
         } ${isF1 ? '!w-32 !h-32 !bg-red-600/30 !blur-2xl' : ''}`} 
-        style={{ left: `${position.x}px`, top: `${position.y}px` }}
+        style={{ left: 0, top: 0, willChange: 'transform' }}
       ></div>
     </>
   );
