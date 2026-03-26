@@ -1,302 +1,53 @@
-# 🚀 Portfolio Professionnel - Joseph Mulliez
+# Portfolio React
 
-> Portfolio interactif et moderne mettant en avant mes projets, compétences et parcours académique
+Bienvenue sur le code source de mon portfolio ! Ce projet a été développé en utilisant **React** et **Vite**, avec un design stylisé à l'aide de **Tailwind CSS**.
 
-<div align="center">
+## 🚀 Technologies utilisées
 
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
-![Responsive Design](https://img.shields.io/badge/Responsive-Mobile%20First-blue)
+*   **React** (v19) - Bibliothèque JavaScript pour la création d'interfaces utilisateurs.
+*   **Vite** - Outil de build front-end extrêmement rapide.
+*   **React Router DOM** - Pour la gestion du routage et la navigation entre les pages.
+*   **Tailwind CSS** - Framework CSS utilitaire pour concevoir une interface moderne et responsive.
+*   **Lucide React & Phosphor Icons** - Bibliothèques d'icônes utilisées pour embellir l'interface.
+*   **ESLint** - Pour garantir la qualité et la cohérence du code.
 
-</div>
+## 🛠️ Installation et exécution en local
 
----
+Pour faire tourner ce projet sur votre machine locale, suivez ces étapes :
 
-## 📋 Table des matières
+1.  **Cloner le dépôt** (ou télécharger le code source) :
+    ```bash
+    git clone <votre-url-de-repo>
+    cd react-portfolio
+    ```
 
-- [À propos](#à-propos)
-- [Technologies](#technologies)
-- [Caractéristiques](#caractéristiques)
-- [Structure du projet](#structure-du-projet)
-- [Installation](#installation)
-- [Contenu](#contenu)
-- [Formations & Compétences](#formations--compétences)
-- [Projets](#projets)
-- [Contact](#contact)
+2.  **Installer les dépendances** :
+    Le projet liste un fichier `pnpm-lock.yaml`, l'utilisation de `pnpm` est donc recommandée.
+    ```bash
+    pnpm install
+    # ou si vous préférez npm:
+    npm install
+    ```
 
----
+3.  **Lancer le serveur de développement** :
+    ```bash
+    pnpm run dev
+    # ou
+    npm run dev
+    ```
+    Le site sera alors accessible localement (généralement sur `http://localhost:5173/`).
 
-## 🎯 À propos
+## 📦 Scripts disponibles
 
-Bienvenue sur mon portfolio professionnel ! Je suis **Joseph Mulliez**, étudiant en **BUT Informatique** à l'**IUT Lannion**.
+Dans le répertoire du projet, vous pouvez exécuter :
 
-Ce site web est une vitrine de mes projets universitaires, mes compétences techniques, et mon expérience en alternance chez **Orano Projets**. Il a été conçu avec une approche *mobile-first* et offre une expérience utilisateur moderne et interactive.
-
-### 🎓 Profil
-
-- **Formation** : BUT Informatique (IUT Lannion)
-- **Expérience** : Alternance chez Orano Projets
-- **Spécialités** : Développement web, Design responsif, Programmation back-end
-- **Localisation** : France
-
----
-
-## 🛠️ Technologies
-
-### Front-end
-- **HTML5** - Structure sémantique et accessible
-- **CSS3** - Styling avancé avec animations et responsivité
-- **JavaScript Vanilla** - Interactivité sans dépendances externes
-
-### Design & UX
-- **Interface HUD (Heads-Up Display)** - Design inspiré par les speedometers
-- **Animations fluides** - Transitions et micro-interactions
-- **Design Responsive** - Compatible mobile, tablette et desktop
-- **Thème Racing/Tech** - Esthétique moderne et dynamique
-
-### Outils & Environnement
-- Versionning : Git & GitHub
-- Éditeur : VS Code
-- Design : Figma (préparation)
-
----
-
-## ✨ Caractéristiques
-
-### 🎨 Design Interactif
-- HUD dynamique avec animationsspeedometer
-- Interface futuriste et immersive
-- Dégradés et effets visuels modernes
-- Mode responsif optimisé
-
-### 📱 Responsive Design
-- Mobile-first approach
-- Breakpoints pour tablette et desktop
-- Navigation adaptative
-- Performance optimisée
-
-### 🔄 Interactivité
-- Menus dynamiques en JavaScript vanilla
-- Animations au survol et scroll
-- Transitions fluides entre les pages
-- Pas de dépendances - Vanilla JS pur
-
-### ♿ Accessibilité
-- Sémantique HTML appropriée
-- Contraste des couleurs optimal
-- Navigation au clavier
-- Aria labels pour l'accessibilité
-
----
+*   `npm run dev` : Lance le serveur de développement avec rechargement à chaud (HMR).
+*   `npm run build` : Compile l'application pour la production, prête à être déployée (dossier `dist`).
+*   `npm run lint` : Analyse le code avec ESLint pour détecter d'éventuelles erreurs.
+*   `npm run preview` : Lance un serveur web local pour prévisualiser la version de production générée par le build.
 
 ## 📁 Structure du projet
 
-```
-portfolio/
-├── index.html                 # Page d'accueil
-├── contact.html              # Formulaire de contact
-├── projets.html              # Portfolio de projets
-├── alternance.html           # Expérience en alternance
-├── portfolio.css             # Styles globaux
-├── portfolio.js              # Scripts et interactivité
-├── projets_temp.html         # Version alternative (archive)
-├── assets/
-│   ├── images/               # Images et icônes
-│   │   └── ...
-│   └── pdf/                  # Documents téléchargeables
-│       └── CV.pdf
-└── README.md                 # Ce fichier
-```
-
----
-
-## 🚀 Installation
-
-### Prérequis
-- Un navigateur web moderne (Chrome, Firefox, Safari, Edge)
-- Un serveur web local (optionnel, pour tester en local)
-
-### Méthode 1 : Ouverture directe
-1. Clone ou télécharge le repositorygit
-   ```bash
-   git clone <url-du-repo>
-   cd portfolio
-   ```
-2. Ouvre `index.html` dans ton navigateur
-
-### Méthode 2 : Avec un serveur local (recommandé)
-```bash
-# Avec Python 3
-python -m http.server 8000
-
-# Ou avec Node.js (http-server)
-npx http-server
-
-# Puis ouvre http://localhost:8000
-```
-
----
-
-## 📖 Contenu
-
-### Pages principales
-
-#### 🏠 Accueil (`index.html`)
-- Présentation personnelle
-- Statistiques professionnelles
-- Appel à l'action (CTA)
-- Links rapides vers les autres sections
-
-#### 💼 Projets (`projets.html`)
-Showcase de mes réalisations :
-- **Projets universitaires** en Java, Python, JavaScript
-- **Projets personnels** et open-source
-- **Hackathons** et challenges
-- Descriptions, technologies utilisées et liens
-
-#### 🏢 Alternance (`alternance.html`)
-- Description de l'expérience chez Orano Projets
-- Missions et responsabilités
-- Compétences acquises
-- Environnement de travail
-
-#### 📧 Contact (`contact.html`)
-- Formulaire de contact
-- Informations de contact directes
-- Liens réseaux sociaux
-- Intégration email (JavaScript)
-
----
-
-## 🎓 Formations & Compétences
-
-### 📚 Formation
-- **BUT Informatique** - IUT Lannion (En cours)
-  - Tronc commun informatique
-  - Spécialisations : Développement, Architecture
-
-### 💪 Compétences du B.U.T. Informatique
-
-#### Parcours A : Réalisation d'applications - conception, développement, validation
-
-**6 compétences principales développées progressivement :**
-
-| Compétence | Année 1 | Année 2 | Année 3 |
-|:-----------|:-------:|:-------:|:-------:|
-| **🔨 Réaliser** | ✅ | ✅ | ✅ |
-| **⚙️ Optimiser** | ✅ | ✅ | ✅ |
-| **🛠️ Administrer** | ✅ | ✅ | ❌ |
-| **💾 Gérer** | ✅ | ✅ | ❌ |
-| **🎯 Conduire** | ✅ | ✅ | ❌ |
-| **👥 Collaborer** | ✅ | ✅ | ✅ |
-
-**Détail par année :**
-
-<details>
-<summary><strong>Année 1 - Fondamentaux</strong></summary>
-
-- **🔨 Réaliser** : Développer des applications informatiques simples
-- **⚙️ Optimiser** : Appréhender et construire des algorithmes
-- **🛠️ Administrer** : Installer et configurer un poste de travail
-- **💾 Gérer** : Concevoir et mettre en place une base de données à partir d'un cahier des charges client
-- **🎯 Conduire** : Identifier les besoins métiers des clients et des utilisateurs
-- **👥 Collaborer** : Identifier ses aptitudes pour travailler dans une équipe informatique
-
-</details>
-
-<details>
-<summary><strong>Année 2 - Approfondissement</strong></summary>
-
-- **🔨 Réaliser** : Partir des exigences et aller jusqu'à une application complète
-- **⚙️ Optimiser** : Sélectionner les algorithmes adéquats pour répondre à un problème donné
-- **🛠️ Administrer** : Déployer des services dans une architecture réseau
-- **💾 Gérer** : Optimiser une base de données, interroger avec une application et mettre en œuvre la sécurité
-- **🎯 Conduire** : Appliquer une démarche et un suivi de projet en fonction des besoins métiers des clients et des utilisateurs
-- **👥 Collaborer** : Situer son rôle et ses missions au sein d'une équipe informatique
-
-</details>
-
-<details>
-<summary><strong>Année 3 - Spécialisation (Parcours A)</strong></summary>
-
-> ⚠️ **Attention** : L'année 3 se concentre sur 3 compétences principales
-
-- **🔨 Réaliser** : Adapter des applications sur un ensemble de supports (embarqué, web, mobile, IoT...)
-- **⚙️ Optimiser** : Analyser et optimiser des applications
-- **👥 Collaborer** : Manager une équipe informatique
-
-*Les compétences "Administrer", "Gérer" et "Conduire" ne sont pas développées en année 3 du parcours A*
-
-</details>
-
----
-
-#### Langages de programmation
-- Java (POO, Collections, Streams)
-- Python (Scripts, Data processing)
-- JavaScript/TypeScript (Web, async)
-- SQL (Requêtes, optimisation)
-- HTML5 & CSS3
-
-#### Frameworks & Outils
-- Spring Boot (Back-end)
-- React ou Vue.js (Front-end)
-- Git & GitHub (Versionning)
-- Bases de données (MySQL, PostgreSQL)
-- Docker (Conteneurisation)
-- Linux/Bash (Scripting)
-
-#### Soft Skills
-- Communication professionnelle
-- Travail en équipe
-- Résolution de problèmes
-- Gestion de projets Agile
-
----
-
-## 🗂️ Projets Destacados
-
-Parcourez mes projets sur la page [projets.html](projets.html) :
-
-1. **[Projet 1]** - Description courte
-2. **[Projet 2]** - Description courte
-3. **[Projet 3]** - Description courte
-
-*À mettre à jour avec tes vrais projets*
-
----
-
-## 📞 Contact
-
-### Comment me rejoindre
-
-📧 **Email** : [ton-email@example.com]
-💼 **LinkedIn** : [linkedin.com/in/josephmulliez](https://linkedin.com)
-🐙 **GitHub** : [github.com/jmulliez](https://github.com)
-🐦 **Twitter** : [@jmulliez](https://twitter.com)
-
-### Formulaire de contact
-Utilise le [formulaire de contact](contact.html) pour m'envoyer un message directement.
-
----
-
-## 📋 Licence
-
-© 2025 Joseph Mulliez. Tous droits réservés.
-
----
-
-## 🎉 Remerciements
-
-- IUT Lannion pour la formation
-- Orano Projets pour l'expérience en alternance
-- La communauté dev pour l'inspiration
-
----
-
-<div align="center">
-
-**Fabriqué avec ❤️ par Joseph Mulliez**
-
-</div>
+La structure classique de l'application est la suivante :
+*   `/src` : Contient tout le code source (composants React, pages, styles, etc.).
+*   `/public` : Les ressources statiques qui ne nécessitent pas de traitement par Vite.
