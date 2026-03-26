@@ -38,7 +38,7 @@ const Passions = () => {
         <div className="absolute -right-20 -top-20 w-[500px] h-[500px] bg-purple-600/10 blur-[100px] rounded-full group-hover/danse:bg-purple-500/20 transition-colors duration-700 pointer-events-none"></div>
         <Sword
           weight="duotone"
-          className="absolute left-1/2 -bottom-20 text-white/5 transition-all duration-1000 -rotate-12 group-hover/danse:rotate-0 pointer-events-none"
+          className="absolute left-1/2 -bottom-20 text-white/5 group-hover/danse:text-purple-500/10 transition-all duration-1000 -rotate-12 group-hover/danse:rotate-12 pointer-events-none"
           size={400}
         />
 
@@ -69,21 +69,20 @@ const Passions = () => {
             </div>
           </div>
 
-          <div className="flex-1 w-full flex gap-4 md:gap-6 h-[250px] sm:h-[350px] md:h-[450px]">
+          <div className="flex-1 w-full flex gap-4 md:gap-6 h-[250px] sm:h-[350px] md:h-[450px] items-center justify-center">
             <img
               src="/assets/images/LC1.png"
               alt="Danse Classique pointes"
-              className="w-1/2 h-full object-cover rounded-[2rem] border border-purple-500/30 transform group-hover/danse:-translate-y-2 transition-all duration-700 shadow-[0_10px_30px_rgba(168,85,247,0.2)]"
+              className="w-1/2 h-full object-cover object-right rounded-[2rem] border border-purple-500/30 group-hover/danse:scale-105 group-hover/danse:-translate-y-3 transition-all duration-700 shadow-[0_10px_30px_rgba(168,85,247,0.2)] group-hover/danse:shadow-[0_20px_40px_rgba(168,85,247,0.4)]"
             />
             <img
               src="/assets/images/LC2.png"
               alt="Ballet stage"
-              className="w-1/2 h-full object-cover rounded-[2rem] border border-purple-500/30 transform translate-y-6 group-hover/danse:translate-y-2 transition-all duration-700 shadow-[0_10px_30px_rgba(168,85,247,0.2)]"
+              className="w-1/2 h-full object-cover object-center rounded-[2rem] border border-purple-500/30 group-hover/danse:scale-105 group-hover/danse:translate-y-3 transition-all duration-700 shadow-[0_10px_30px_rgba(168,85,247,0.2)] group-hover/danse:shadow-[0_20px_40px_rgba(168,85,247,0.4)]"
             />
           </div>
         </div>
       </article>
-      {/* F1 SECTION */}
       <article
         data-cursor="f1"
         className="bg-gradient-to-br from-[#1a0a0a] to-[#2a0e0e] border border-red-900/50 rounded-[40px] p-10 md:p-14 lg:p-16 shadow-[0_20px_60px_rgba(239,68,68,0.15)] hover:border-red-500/40 hover:shadow-[0_20px_60px_rgba(239,68,68,0.3)] transition-all duration-700 relative overflow-hidden group/f1"
