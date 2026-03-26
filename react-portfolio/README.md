@@ -1,16 +1,53 @@
-# React + Vite
+# Portfolio React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bienvenue sur le code source de mon portfolio ! Ce projet a été développé en utilisant **React** et **Vite**, avec un design stylisé à l'aide de **Tailwind CSS**.
 
-Currently, two official plugins are available:
+## 🚀 Technologies utilisées
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+*   **React** (v19) - Bibliothèque JavaScript pour la création d'interfaces utilisateurs.
+*   **Vite** - Outil de build front-end extrêmement rapide.
+*   **React Router DOM** - Pour la gestion du routage et la navigation entre les pages.
+*   **Tailwind CSS** - Framework CSS utilitaire pour concevoir une interface moderne et responsive.
+*   **Lucide React & Phosphor Icons** - Bibliothèques d'icônes utilisées pour embellir l'interface.
+*   **ESLint** - Pour garantir la qualité et la cohérence du code.
 
-## React Compiler
+## 🛠️ Installation et exécution en local
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Pour faire tourner ce projet sur votre machine locale, suivez ces étapes :
 
-## Expanding the ESLint configuration
+1.  **Cloner le dépôt** (ou télécharger le code source) :
+    ```bash
+    git clone <votre-url-de-repo>
+    cd react-portfolio
+    ```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+2.  **Installer les dépendances** :
+    Le projet liste un fichier `pnpm-lock.yaml`, l'utilisation de `pnpm` est donc recommandée.
+    ```bash
+    pnpm install
+    # ou si vous préférez npm:
+    npm install
+    ```
+
+3.  **Lancer le serveur de développement** :
+    ```bash
+    pnpm run dev
+    # ou
+    npm run dev
+    ```
+    Le site sera alors accessible localement (généralement sur `http://localhost:5173/`).
+
+## 📦 Scripts disponibles
+
+Dans le répertoire du projet, vous pouvez exécuter :
+
+*   `npm run dev` : Lance le serveur de développement avec rechargement à chaud (HMR).
+*   `npm run build` : Compile l'application pour la production, prête à être déployée (dossier `dist`).
+*   `npm run lint` : Analyse le code avec ESLint pour détecter d'éventuelles erreurs.
+*   `npm run preview` : Lance un serveur web local pour prévisualiser la version de production générée par le build.
+
+## 📁 Structure du projet
+
+La structure classique de l'application est la suivante :
+*   `/src` : Contient tout le code source (composants React, pages, styles, etc.).
+*   `/public` : Les ressources statiques qui ne nécessitent pas de traitement par Vite.
