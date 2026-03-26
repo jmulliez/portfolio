@@ -79,13 +79,12 @@ const Projets = () => {
         />
         <div className="absolute inset-0 opacity-10 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] mix-blend-overlay pointer-events-none"></div>
 
-        <div className="w-full md:w-1/2 shrink-0 relative z-10 flex flex-col justify-center items-center bg-black/40 border border-white/5 rounded-3xl p-8 overflow-hidden group/f1img">
-          <ChartLineUp
-            size={120}
-            className="text-red-500/80 drop-shadow-[0_0_30px_rgba(239,68,68,0.8)] group-hover/f1img:scale-110 transition-transform duration-500"
-          />
-          <div className="absolute w-full h-1 bg-gradient-to-r from-transparent via-red-500 to-transparent top-1/2 animate-[spin_3s_linear_infinite] opacity-30 mix-blend-screen"></div>
-        </div>
+        <img
+          src="assets/images/projet_f1.jpeg"
+          alt="F1 Dashboard"
+          className="w-45 h-60 object-cover rounded-2xl border border-white/20 shadow-lg group-hover:scale-[1.02] transition-transform duration-500"
+        />
+        
 
         <div className="flex flex-col h-full justify-center w-full z-10">
           <span className="text-xs font-bold text-red-500 uppercase tracking-widest block mb-2 px-3 py-1 bg-red-500/10 border border-red-500/20 w-max rounded-md">
@@ -112,12 +111,6 @@ const Projets = () => {
             Details, Driver Stats, Live Standings).
           </p>
           <div className="flex gap-4 mt-auto flex-wrap">
-            <img
-              src="/assets/images/projet_f1.jpeg"
-              alt="F1 Dashboard"
-              className="w-full h-48 object-cover rounded-2xl border border-white/20 shadow-lg group-hover:scale-[1.02] transition-transform duration-500"
-            />
-
             <span className="flex items-center gap-2 bg-gradient-to-r from-red-600 to-rose-600 text-white font-bold px-6 py-3 rounded-xl shadow-[0_5px_20px_rgba(239,68,68,0.4)]">
               <FlagCheckered size={20} /> Projet Actif
             </span>
