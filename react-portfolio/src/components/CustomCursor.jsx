@@ -1,89 +1,95 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { motion, useSpring, useMotionValue } from 'framer-motion';
 
 const CustomCursor = () => {
-  const [hasMoved, setHasMoved] = useState(false);
   const [isHovering, setIsHovering] = useState(false);
   const [isF1, setIsF1] = useState(false);
-  const cursorRef = useRef(null);
-  const trailRef = useRef(null);
-  const hasMovedRef = useRef(false);
+  const [isVisible, setIsVisible] = useState(false);
+
+  const mouseX = useMotionValue(0);
+  const mouseY = useMotionValue(0);
+
+  const springConfig = { damping: 25, stiffness: 200 };
+  const springX = useSpring(mouseX, springConfig);
+  const springY = useSpring(mouseY, springConfig);
 
   useEffect(() => {
-    let animationFrameId;
-    
     const moveCursor = (e) => {
-        cancelAnimationFrame(animationFrameId);
-        animationFrameId = requestAnimationFrame(() => {
-            const transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0) translate(-50%, -50%)`;
-
-            if (cursorRef.current) {
-              cursorRef.current.style.transform = transform;
-            }
-
-            if (trailRef.current) {
-              trailRef.current.style.transform = transform;
-            }
-
-            if (!hasMovedRef.current) {
-              hasMovedRef.current = true;
-              setHasMoved(true);
-            }
-        });
+      mouseX.set(e.clientX);
+      mouseY.set(e.clientY);
+      if (!isVisible) setIsVisible(true);
     };
-    
+
     const handleMouseOver = (e) => {
-        const target = e.target.closest('a, button, .group\\/stat, .group\\/card, .group\\/timeline, [data-cursor="f1"]');
-        if(target) {
-            setIsHovering(true);
-            if(target.getAttribute('data-cursor') === 'f1' || target.closest('[data-cursor="f1"]')) {
-                setIsF1(true);
-            } else {
-                setIsF1(false);
-            }
+      const target = e.target.closest('a, button, .group, [data-cursor="f1"]');
+      if (target) {
+        setIsHovering(true);
+        if (target.getAttribute('data-cursor') === 'f1') {
+          setIsF1(true);
         }
-    };
-    
-    const handleMouseOut = (e) => {
-        const target = e.target.closest('a, button, .group\\/stat, .group\\/card, .group\\/timeline, [data-cursor="f1"]');
-        if(target) {
-            setIsHovering(false);
-            setIsF1(false);
-        }
+      }
     };
 
-    document.addEventListener('mousemove', moveCursor, { passive: true });
+    const handleMouseOut = (e) => {
+      const target = e.target.closest('a, button, .group, [data-cursor="f1"]');
+      if (target) {
+        setIsHovering(false);
+        setIsF1(false);
+      }
+    };
+
+    window.addEventListener('mousemove', moveCursor);
     document.addEventListener('mouseover', handleMouseOver);
     document.addEventListener('mouseout', handleMouseOut);
 
     return () => {
-      document.removeEventListener('mousemove', moveCursor);
+      window.removeEventListener('mousemove', moveCursor);
       document.removeEventListener('mouseover', handleMouseOver);
       document.removeEventListener('mouseout', handleMouseOut);
-      cancelAnimationFrame(animationFrameId);
     };
-  }, []);
+  }, [mouseX, mouseY, isVisible]);
 
-  if (!hasMoved) return null;
+  if (!isVisible) return null;
 
   return (
     <>
-      <div 
-        ref={cursorRef}
-        className={`fixed pointer-events-none z-[9999] rounded-full mix-blend-exclusion transition-[width,height,background-color,border-color,box-shadow,opacity] duration-150 ease-out flex items-center justify-center ${
-            isHovering ? 'w-12 h-12 bg-transparent border border-white/50' : 'w-4 h-4 bg-white shadow-[0_0_10px_white]'
-        } ${isF1 ? '!w-16 !h-16 !border-red-500 !bg-red-500/10 !mix-blend-normal' : ''}`} 
-        style={{ left: 0, top: 0, willChange: 'transform' }}
+      {/* Outer Reticle */}
+      <motion.div
+        style={{
+          x: springX,
+          y: springY,
+          translateX: '-50%',
+          translateY: '-50%',
+        }}
+        className={`fixed top-0 left-0 pointer-events-none z-[9999] flex items-center justify-center transition-all duration-300 ${
+          isHovering ? 'w-16 h-16 opacity-100' : 'w-8 h-8 opacity-40'
+        }`}
       >
-        {isF1 && <span className="text-xl animate-bounce leading-none" style={{textShadow: '0 0 10px red'}}>🏎️</span>}
-      </div>
-      
-      <div 
-        ref={trailRef}
-        className={`fixed pointer-events-none z-[9998] rounded-full transition-[width,height,background-color,filter,opacity] duration-200 ease-out ${
-            isHovering ? 'w-24 h-24 bg-white/10 blur-xl' : 'w-10 h-10 bg-white/30 blur-md'
-        } ${isF1 ? '!w-32 !h-32 !bg-red-600/30 !blur-2xl' : ''}`} 
-        style={{ left: 0, top: 0, willChange: 'transform' }}
-      ></div>
+        <div className={`absolute inset-0 border border-f1-cyan/30 rounded-sm transform rotate-45 transition-all duration-300 ${isHovering ? 'scale-125 border-f1-cyan' : 'scale-100'}`} />
+        <div className={`absolute inset-0 border border-f1-cyan/10 transition-all duration-300 ${isHovering ? 'scale-150 rotate-90 border-f1-cyan/40' : 'scale-100'}`} />
+        
+        {/* Technical Markings */}
+        {isHovering && (
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="absolute top-[-20px] left-[-20px] font-technical text-[8px] text-f1-cyan"
+          >
+            LOCKED
+          </motion.div>
+        )}
+      </motion.div>
+
+      {/* Inner Dot */}
+      <motion.div
+        style={{
+          x: mouseX,
+          y: mouseY,
+          translateX: '-50%',
+          translateY: '-50%',
+        }}
+        className={`fixed top-0 left-0 pointer-events-none z-[9999] w-1 h-1 bg-f1-cyan rounded-full shadow-[0_0_8px_#00ffcc]`}
+      />
     </>
   );
 };

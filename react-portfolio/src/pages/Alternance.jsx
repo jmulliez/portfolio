@@ -1,93 +1,148 @@
 import React from 'react';
-import { Buildings, CheckCircle, Atom } from '@phosphor-icons/react';
-
-const cardClass = "bg-white/5 backdrop-blur-2xl border border-white/10 rounded-[32px] p-8 shadow-2xl hover:shadow-[0_10px_40px_rgba(139,92,246,0.15)] hover:-translate-y-1 hover:bg-white/10 hover:border-white/20 transition-all duration-500 overflow-hidden relative group flex flex-col";
+import { motion } from 'framer-motion';
+import { Building2, CheckCircle, Database, Shield, Zap, TrendingUp, Cpu } from 'lucide-react';
+import HUDCard from '../components/HUDCard';
 
 const Alternance = () => {
     return (
-        <div className="w-full max-w-7xl mx-auto px-6 pb-24 pt-32 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <article className={`${cardClass} md:col-span-2 lg:col-span-2 lg:row-span-2 bg-gradient-to-br from-yellow-500/10 to-orange-500/5`} style={{padding: '40px 48px'}}>
-                <Buildings size={200} className="absolute -right-10 -bottom-10 text-yellow-500/5 group-hover:text-yellow-500/10 transition-colors duration-500 rotate-12" />
-                <div className="mb-8">
-                    <span className="bg-yellow-400/20 text-yellow-400 border border-yellow-400/30 text-xs font-bold px-4 py-2 rounded-full uppercase tracking-widest shadow-[0_0_15px_rgba(250,204,21,0.2)]">Actuellement en poste</span>
-                </div>
-                <h1 className="text-3xl md:text-5xl font-outfit font-extrabold flex items-center gap-4 mb-6 text-white"><Buildings size={40} className="text-yellow-400 shrink-0" /> Alternance Orano Projets</h1>
-                <p className="text-gray-300 text-lg leading-relaxed mb-6 font-medium">Orano Projets est l'entité d'ingénierie et de pilotage de grands projets industriels du groupe mondial Orano (nucléaire civil).</p>
-                <p className="text-gray-400 text-base leading-relaxed relative z-10 bg-black/20 p-6 rounded-2xl border border-white/5">
-                    <strong className="text-white block mb-2">Ma mission :</strong> 
-                    Fiabiliser et accélérer le suivi d'activités via la maintenance et la création de nouveaux logiciels métier sous Excel (VBA). Ce travail permet aux chefs de projet de rationaliser leur reporting, garantissant la conformité, la qualité et la rapidité dans un domaine extrêmement réglementé.
-                </p>
-            </article>
+        <div className="w-full">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                
+                {/* CAREER OVERVIEW */}
+                <HUDCard 
+                    title="CAREER_TRACK // ORANO_PROJETS"
+                    label="MISSION.LOG"
+                    status="ACTIVE"
+                    className="lg:col-span-8"
+                >
+                    <div className="flex flex-col gap-8">
+                        <div className="flex flex-col md:flex-row gap-8 items-start">
+                            <div className="w-full md:w-1/3 shrink-0 aspect-video bg-f1-black border border-white/10 flex items-center justify-center relative group overflow-hidden">
+                                <Building2 size={80} className="text-f1-white/10 group-hover:text-f1-cyan/20 transition-colors" />
+                                <div className="absolute inset-x-0 bottom-0 h-1 bg-f1-cyan/40" />
+                            </div>
+                            <div className="flex-1">
+                                <h1 className="text-3xl font-technical font-bold text-f1-white mb-4 uppercase tracking-wider">
+                                    INGÉNIERIE & DÉVELOPPEMENT <span className="text-f1-cyan">ORANO</span>
+                                </h1>
+                                <p className="text-f1-white/60 text-sm leading-relaxed mb-6">
+                                    Orano Projets est l'entité d'ingénierie et de pilotage de grands projets industriels du groupe mondial Orano. 
+                                    Ma mission consiste à fiabiliser et accélérer le suivi d'activités via la création d'outils critiques.
+                                </p>
+                                <div className="p-4 bg-f1-cyan/5 border-l-2 border-f1-cyan">
+                                    <span className="font-technical text-[10px] text-f1-cyan font-bold block mb-2 tracking-widest">MISSION.CORE_OBJECTIVE</span>
+                                    <p className="text-f1-white/80 text-xs italic">
+                                        "Digitalisation des processus de reporting et automatisation des workflows de gestion de projet nucléaire."
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
 
-            <article className={`${cardClass} md:col-span-2 lg:col-span-2 lg:row-span-2 grid grid-cols-2 gap-4`} style={{padding: '24px'}}>
-                <div className="bg-black/20 border border-white/5 rounded-3xl p-6 flex flex-col justify-center items-center text-center group/stat hover:bg-white/5 transition-colors">
-                    <span className="text-4xl lg:text-6xl font-extrabold font-outfit text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-400 mb-2 group-hover/stat:scale-110 transition-transform">~4,9</span>
-                    <span className="text-xs text-gray-400 uppercase tracking-widest font-semibold">Milliards € CA (2024)</span>
-                </div>
-                <div className="bg-black/20 border border-white/5 rounded-3xl p-6 flex flex-col justify-center items-center text-center group/stat hover:bg-white/5 transition-colors">
-                    <span className="text-4xl lg:text-6xl font-extrabold font-outfit text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400 mb-2 group-hover/stat:scale-110 transition-transform">16k+</span>
-                    <span className="text-xs text-gray-400 uppercase tracking-widest font-semibold">Collaborateurs</span>
-                </div>
-                <div className="bg-black/20 border border-white/5 rounded-3xl p-6 flex flex-col justify-center items-center text-center group/stat hover:bg-white/5 transition-colors">
-                    <span className="text-4xl lg:text-6xl font-extrabold font-outfit text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400 mb-2 group-hover/stat:scale-110 transition-transform">30+</span>
-                    <span className="text-xs text-gray-400 uppercase tracking-widest font-semibold">Sites en France</span>
-                </div>
-                <div className="bg-black/20 border border-white/5 rounded-3xl p-6 flex flex-col justify-center items-center text-center group/stat hover:bg-white/5 transition-colors">
-                    <span className="text-4xl lg:text-6xl font-extrabold font-outfit text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-rose-400 mb-2 group-hover/stat:scale-110 transition-transform">15+</span>
-                    <span className="text-xs text-gray-400 uppercase tracking-widest font-semibold">Pays de présence</span>
-                </div>
-            </article>
+                        {/* KEY PERFORMANCES */}
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            {[
+                                { icon: <Database size={20} />, label: "DATA.RELIABILITY", val: "99.9%" },
+                                { icon: <Zap size={20} />, label: "PROCESS.SPEED", val: "+40%" },
+                                { icon: <Shield size={20} />, label: "SAFETY.COMPLIANCE", val: "L1" }
+                            ].map(stat => (
+                                <div key={stat.label} className="p-4 border border-white/5 bg-f1-black/50 flex flex-col items-center text-center">
+                                    <div className="text-f1-cyan mb-2">{stat.icon}</div>
+                                    <span className="text-[10px] text-f1-white/20 font-technical tracking-widest mb-1">{stat.label}</span>
+                                    <span className="text-xl font-technical font-bold text-f1-white">{stat.val}</span>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </HUDCard>
 
-            <article className={`${cardClass} lg:col-span-4`}>
-                <h3 className="text-2xl font-bold font-outfit text-white mb-8 border-b border-white/10 pb-4 flex items-center gap-3"><CheckCircle size={28} className="text-green-400" /> Mes Missions et Réalisations</h3>
-                <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">
-                    <li className="flex items-start gap-4">
-                        <span className="text-green-400 text-xl font-bold mt-1">→</span>
-                        <p className="text-sm text-gray-400 leading-relaxed"><strong className="text-white">Maintenance corrective :</strong> Stabilisation des macros, gestion des erreurs, sécurisation des entrées pour les outils Legacy.</p>
-                    </li>
-                    <li className="flex items-start gap-4">
-                        <span className="text-green-400 text-xl font-bold mt-1">→</span>
-                        <p className="text-sm text-gray-400 leading-relaxed"><strong className="text-white">Maintenance évolutive :</strong> Nouveaux filtres, exports automatisés, indicateurs KPI et vues synthétiques.</p>
-                    </li>
-                    <li className="flex items-start gap-4">
-                        <span className="text-green-400 text-xl font-bold mt-1">→</span>
-                        <p className="text-sm text-gray-400 leading-relaxed"><strong className="text-white">Création d'outils from scratch :</strong> Conception complète de logiciels Excel/VBA dédiés au suivi d'activité et gestion de projet (formulaires dynamiques, dashboards).</p>
-                    </li>
-                    <li className="flex items-start gap-4">
-                        <span className="text-green-400 text-xl font-bold mt-1">→</span>
-                        <p className="text-sm text-gray-400 leading-relaxed"><strong className="text-white">Refactoring VBA :</strong> Factorisation de code, nommage explicite des variables, suppression des boucles coûteuses pour des performances optimales.</p>
-                    </li>
-                    <li className="flex items-start gap-4">
-                        <span className="text-green-400 text-xl font-bold mt-1">→</span>
-                        <p className="text-sm text-gray-400 leading-relaxed"><strong className="text-white">UX et Accompagnement :</strong> Amélioration des interfaces, ajout de raccourcis clavier, rédaction de documentations "pas-à-pas" et support IT direct aux utilisateurs.</p>
-                    </li>
-                </ul>
-            </article>
+                {/* CORPORATE METRICS */}
+                <HUDCard 
+                    title="ENTITY_PROFILE // ORANO.CORP"
+                    label="SOURCE.WIKI"
+                    className="lg:col-span-4"
+                >
+                    <div className="space-y-4">
+                        <div className="p-4 border border-white/5 bg-f1-black/50">
+                            <span className="text-[8px] text-f1-white/20 font-technical block mb-1">REVENUE (2024)</span>
+                            <div className="text-2xl font-technical font-bold text-f1-white">~4.9 <span className="text-f1-cyan">BN.€</span></div>
+                        </div>
+                        <div className="p-4 border border-white/5 bg-f1-black/50">
+                            <span className="text-[8px] text-f1-white/20 font-technical block mb-1">GLOBAL_STAFF</span>
+                            <div className="text-2xl font-technical font-bold text-f1-white">16K+ <span className="text-f1-cyan">UNITS</span></div>
+                        </div>
+                        <div className="p-4 border border-white/5 bg-f1-black/50">
+                            <span className="text-[8px] text-f1-white/20 font-technical block mb-1">DEPOLYMENT</span>
+                            <div className="text-2xl font-technical font-bold text-f1-white">30+ <span className="text-f1-cyan">SITES</span></div>
+                        </div>
+                        <div className="mt-4 pt-4 border-t border-white/10 flex flex-col gap-2">
+                            <div className="flex justify-between items-center text-[10px] font-technical text-f1-white/40">
+                                <span>SYSTEM.Uptime</span>
+                                <span>99.99%</span>
+                            </div>
+                            <div className="w-full h-1 bg-white/5 overflow-hidden">
+                                <motion.div 
+                                    initial={{ width: 0 }}
+                                    animate={{ width: '100.00%' }}
+                                    className="h-full bg-f1-cyan shadow-[0_0_8px_#00ffcc]"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </HUDCard>
 
-            <article className={`${cardClass} lg:col-span-4`}>
-                <h3 className="text-2xl font-bold font-outfit text-white mb-2 flex items-center gap-3"><Atom size={28} className="text-blue-400" /> Contexte : Le Cycle du Combustible Nucléaire (Orano)</h3>
-                <p className="text-gray-400 text-sm leading-relaxed mb-8 max-w-3xl">Appréhender le métier d'Orano est crucial pour adapter les solutions logicielles : souveraineté énergétique, gestion des déchets (Cigéo), sûreté zéro-défaut, etc.</p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <div className="bg-black/30 border border-white/5 rounded-2xl p-6 hover:bg-white/5 hover:border-white/10 transition-all duration-300 hover:-translate-y-2">
-                        <h4 className="text-lg font-bold text-white mb-3">⛏️ Mines & Conversion</h4>
-                        <p className="text-xs text-gray-400 leading-relaxed">Exploration et transformation du minerai d'uranium brut en UF6 purifié.</p>
+                {/* DETAILED TASKS */}
+                <HUDCard 
+                    title="TASK_HISTORY // OPERATIONS"
+                    label="TX.LOG"
+                    className="lg:col-span-12"
+                >
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        {[
+                            { title: "MAINTENANCE.CORRECTIVE", desc: "Stabilisation des macros legacy, gestion des exceptions et sécurisation des flux de données." },
+                            { title: "DEVELOPMENT.EVOLUTIVE", desc: "Implémentation de nouveaux filtres décisionnels et génération automatisée de KPI." },
+                            { title: "UX.ENGINEERING", desc: "Refonte des interfaces Excel pour une navigation fluide et intuitive pour les chefs de projet." },
+                            { title: "OPTIMIZATION.CODE", desc: "Refactoring complet des algorithmes VBA pour réduire le temps de traitement de -60%." },
+                            { title: "DOCUMENTATION.SYS", desc: "Rédaction de protocoles d'utilisation 'Zero-Error' pour les équipes opérationnelles." },
+                            { title: "MISSION.SCR_SCRATCH", desc: "Conception from-scratch de modules de suivi d'activité avec base de données intégrée." }
+                        ].map((task, i) => (
+                            <div key={i} className="flex gap-4 p-4 border border-white/5 hover:bg-white/5 transition-colors group">
+                                <div className="text-f1-cyan font-technical text-sm font-bold opacity-30 group-hover:opacity-100 transition-opacity">0{i+1}.</div>
+                                <div>
+                                    <h4 className="font-technical text-sm font-bold text-f1-white mb-2 tracking-widest">{task.title}</h4>
+                                    <p className="text-f1-white/40 text-xs leading-relaxed">{task.desc}</p>
+                                </div>
+                            </div>
+                        ))}
                     </div>
-                    <div className="bg-black/30 border border-white/5 rounded-2xl p-6 hover:bg-white/5 hover:border-white/10 transition-all duration-300 hover:-translate-y-2">
-                        <h4 className="text-lg font-bold text-white mb-3">⚡ Enrichissement & Fabrication</h4>
-                        <p className="text-xs text-gray-400 leading-relaxed">Enrichissement de l'uranium et production d'assemblages pour les réacteurs (Georges Besse II).</p>
-                    </div>
-                    <div className="bg-black/30 border border-white/5 rounded-2xl p-6 hover:bg-white/5 hover:border-white/10 transition-all duration-300 hover:-translate-y-2">
-                        <h4 className="text-lg font-bold text-white mb-3">♻️ Recyclage & Démantèlement</h4>
-                        <p className="text-xs text-gray-400 leading-relaxed">Traitement des combustibles usés à La Hague (96% recyclable) et gestion complexe des déchets.</p>
-                    </div>
-                    <div className="bg-black/30 border border-white/5 rounded-2xl p-6 hover:bg-white/5 hover:border-white/10 transition-all duration-300 hover:-translate-y-2">
-                        <h4 className="text-lg font-bold text-white mb-3">🏥 Innovation (Orano Med)</h4>
-                        <p className="text-xs text-gray-400 leading-relaxed">Filiale spécialisée dans le croisement du nucléaire et des biotechnologies contre le cancer.</p>
+                </HUDCard>
+
+                {/* NUCLEAR FUEL CYCLE (RESOURCES) */}
+                <div className="lg:col-span-12 mt-8">
+                    <h3 className="font-technical text-xl font-bold text-f1-white mb-6 tracking-widest uppercase flex items-center gap-3">
+                        <Cpu size={24} className="text-f1-cyan" />
+                        CONTEXT: NUCLEAR_FUEL_CYCLE
+                    </h3>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 font-technical">
+                        {[
+                            { id: "01", icon: "⛏️", name: "MINING", desc: "Extraction and conversion of raw uranium." },
+                            { id: "02", icon: "⚡", name: "ENRICHMENT", desc: "Fuel fabrication for reactors (GB II)." },
+                            { id: "03", icon: "♻️", name: "RECYCLING", desc: "Spent fuel treatment (La Hague)." },
+                            { id: "04", icon: "🏥", name: "MED.TECH", desc: "Isotopes for cancer treatment research." }
+                        ].map(ctx => (
+                            <div key={ctx.id} className="p-6 bg-f1-black border border-white/10 relative group hover:border-f1-cyan transition-colors">
+                                <div className="absolute top-2 right-2 text-[8px] text-f1-white/20">RES.{ctx.id}</div>
+                                <div className="text-4xl mb-4 grayscale group-hover:grayscale-0 transition-all">{ctx.icon}</div>
+                                <h4 className="text-sm font-bold text-f1-white mb-2 tracking-[0.2em]">{ctx.name}</h4>
+                                <p className="text-[10px] text-f1-white/40 leading-relaxed uppercase">{ctx.desc}</p>
+                                <div className="absolute bottom-0 left-0 h-[2px] w-0 bg-f1-cyan group-hover:w-full transition-all duration-500" />
+                            </div>
+                        ))}
                     </div>
                 </div>
-            </article>
 
+            </div>
         </div>
     );
 };
+
 export default Alternance;
